@@ -8,10 +8,10 @@ El objetivo de nuestra aplicación es el de crear un espacio donde aficionados o
 
 ## Desarrolladores de esta app🌆
 
-**Martin Perez** (https://github.com/Martinperez21): Se encarga de desarrolar la parte del frontend.
+ * **Martin Perez** (https://github.com/Martinperez21): Se encarga de desarrolar la parte del frontend.
 
-**Tomas Mendoza** (https://github.com/leopoldo109): Se encarga de la parte del backend.
+ * **Tomas Mendoza** (https://github.com/leopoldo109): Se encarga de la parte del backend.
 
-**Franco Herrera** (https://github.com/scott1ee): Se encarga de la parte de base de datos.
+ * **Franco Herrera** (https://github.com/scott1ee): Se encarga de la parte de base de datos.
 
-**Nicole Dennon** (https://github.com/Nikyshtan): Se encarga de organizar las tareas y guiar a los integrantes del grupo.
+ * **Nicole Dennon** (https://github.com/Nikyshtan): Se encarga de organizar las tareas y guiar a los integrantes del grupo.
