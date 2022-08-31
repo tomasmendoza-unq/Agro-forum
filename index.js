@@ -4,11 +4,7 @@ const app = express()
 const port = 8000
 
 
-<<<<<<< HEAD
 
-app.set('view engine', 'hbs');
-app.use( express.static('public'))
-=======
 app.use( express.static('public'))
 app.set('view engine', 'hbs');
 
