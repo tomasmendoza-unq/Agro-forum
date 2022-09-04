@@ -3,7 +3,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+    
     <link rel="stylesheet" href="/style.css" />
+    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,6 +21,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+
     <title>Agro forum</title>
   </head>
   <body>
@@ -27,19 +35,39 @@
 
     <!-- Style pagina principal -->
     <style>
-      body{ background-color: rgb(255, 255, 255); } .carousel-item{
+      body{ background-color: #e6e6e6; font-family: 'Hind Siliguri', sans-serif;
+      } 
+
+      button{
+        font-size: 20px !important;
+      }
+      .carousel-item{
       background-color: rgb(34, 48, 37); height: 38rem; } .overlay-image{
-      opacity: 50%; }
+      opacity: 40%; 
+      } 
+
+      .navbar-fluid, footer{ background-color: #499b4a; color:
+      white; font-weight:500; 
+      } 
+
+      .card{ box-shadow: 0px 5px 10px 7px #0000003b; background-color: #b1f3b220; 
+      }
+
+      button {
+        font-weight:500;
+      }
+
+      
     </style>
 
     <!-- Barra de navegacion -->
-    <nav class="navbar-dark bg-dark">
+    <nav class="navbar-fluid">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-4 text-left mt-3">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
-                <p class="fs-5">Agro Forum</p>
+                <p class="fs-3 tittle-agro">Agro Forum</p>
               </a>
             </div>
           </div>
@@ -47,7 +75,7 @@
             <div class="container-fluid">
               <form class="d-flex" role="search">
                 <input
-                  class="form-control border form-control-success text-bg-dark me-2"
+                  class="form-control border form-control-success text-bg-white me-2"
                   type="search"
                   placeholder="Buscador"
                   aria-label="Search"
@@ -60,7 +88,7 @@
             </div>
           </div>
           <div class="col-lg-4 text-center mt-3">
-            <ul class="nav justify-content-end">
+            <ul class="nav justify-content-end fs-5">
               <li class="nav-item">
                 <a
                   class="nav-link link-light btn btn-outline-white me-2"
@@ -86,50 +114,64 @@
         </div>
       </div>
     </nav>
-
+    
     <!-- Seccion de posteos (en proceso) -->
-
     <div class="container text-center mt-5 mb-5">
       <div class="row g-2 justify-content-center">
         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card shadow p-3 m-3">
-            <div class="card-body">
-              <h3 class="card-title">Los tomates son piolas</h3>
+          <div class="card p-3 m-3" style="width:22rem; height: 32rem;">
+            <div class="card-body mx-auto" >
+              <h3 class="card-title">Cosecha record de tomates en Tierra del fuego.</h3>
               <p class="card-text">26/08/2022</p>
-              <img src="/img/tomate.jpg" class="card-img-top" alt="..." />
+              <img
+                src="/img/tomate.jpg"
+                class="card-img-top rounded"
+                alt="..."
+                style="height: 12rem;"
+              />
               <p
                 class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
               >TomatoLover21</p>
-              <p class="d-flex justify-con card-text">Me gustan mucho los
-                tomates porque son rojos.</p>
+              <p class="d-flex justify-con card-text">Cosecha record de tomates en Tierra del fuego.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card shadow p-3 m-3">
-            <div class="card-body">
-              <h3 class="card-title">Los tomates son piolas</h3>
+          <div class="card p-3 m-3" style="width:22rem; height: 32rem;">
+            <div class="card-body px-auto">
+              <h3 class="card-title">Nueva temporada de cultivos de soja en Mendoza, Argentina</h3>
               <p class="card-text">26/08/2022</p>
-              <img src="/img/tomate.jpg" class="card-img-top" alt="..." />
+              <img
+                src="/img/card-image-example-2.jpg"
+                class="card-img-top rounded"
+                alt="..."
+              style="height: 12rem;"
+              />
               <p
                 class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
               >TomatoLover21</p>
-              <p class="card-text">Me gustan mucho los tomates porque son rojos.</p>
+              <p class="card-text">Me gustan mucho la soja porque es fachera.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card shadow p-3 m-3">
-            <div class="card-body">
-              <h3 class="card-title">Los tomates son piolas</h3>
+          <di0v class="card p-3 m-3" style="width:22rem; height: 32rem;">
+            <div class="card-body px-auto">
+              <h3 class="card-title">Agro cultivos de paltas en mexico, fan de la vida</h3>
               <p class="card-text">26/08/2022</p>
-              <img src="/img/tomate.jpg" class="card-img-top" alt="..." />
+              <img
+                src="/img/card-image-example-3.jpg"
+                class="card-img-top rounded"
+                alt="..."
+                style="height: 12rem;"
+              />
               <p
                 class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
               >TomatoLover21</p>
-              <p class="card-text">Me gustan mucho los tomates porque son rojos.</p>
+              <p class="card-text">Me gustan mucho los paltas porque son verdes.</p>
             </div>
-          </div>
+            
+          </di0v>
         </div>
       </div>
     </div>
@@ -171,8 +213,8 @@
               class="d-block w-100 overlay-image"
               alt="..."
             />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Tomate</h5>
+            <div class="carousel-caption d-none d-md-block fs-5">
+              <h2>Cosecha imagen de ejemplo</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
                 aperiam natus perferendis tempora adipisci, molestiae, sunt
                 rerum iste ut minus iure! Et facere perferendis quibusdam, minus
@@ -185,9 +227,12 @@
               class="d-block w-100 overlay-image"
               alt="..."
             />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+            <div class="carousel-caption d-none d-md-block fs-5">
+              <h2>Cosecha imagen de ejemplo</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                aperiam natus perferendis tempora adipisci, molestiae, sunt
+                rerum iste ut minus iure! Et facere perferendis quibusdam, minus
+                itaque quos quod consequuntur!</p>
             </div>
           </div>
           <div class="carousel-item">
@@ -196,9 +241,12 @@
               class="d-block w-100 overlay-image"
               alt="..."
             />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+            <div class="carousel-caption d-none d-md-block fs-5">
+              <h2>Cosecha imagen de ejemplo</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                aperiam natus perferendis tempora adipisci, molestiae, sunt
+                rerum iste ut minus iure! Et facere perferendis quibusdam, minus
+                itaque quos quod consequuntur!</p>
             </div>
           </div>
         </div>
@@ -224,16 +272,12 @@
     </div>
 
     <!-- Top posts de Agro Usuarios -->
-    <div class="container-fluid">
+    <div class="container-fluid agro-top-user">
       <div class="row m-5">
         <div class="col">
-          <h1 class="d-flex ">Agro Top's Users de la semana:</h1>
+          <h1 class="d-flex">Agro Top's Users de la semana:</h1>
         </div>
       </div>
-    </div>
-
-    <!-- Top posts de Agro Usuarios -->
-    <div class="container-fluid">
       <div class="row m-5">
         <div class="col-1 pt-3 pe-3">
           <img
@@ -307,31 +351,31 @@
     </div>
 
     <!-- Footer -->
-
-    <footer class="bg-dark">
+    <footer>
       <div class="container">
         <nav class="row">
           <ul
-            class="nav justify-content-center border-bottom border-light p-4 mb-4 border-opacity-10"
+            class="nav justify-content-center border-bottom border-light p-4 mb-4 border-opacity-10 fs-6"
+
           >
             <li class="nav-item"><a
                 href="#"
-                class="nav-link mx-4 text-muted"
+                class="nav-link link-light mx-4"
               >Sobre Nosotros</a></li>
             <li class="nav-item"><a
                 href="#"
-                class="nav-link mx-4 text-muted"
-              >a</a></li>
+                class="nav-link link-light mx-4"
+              >Instagram</a></li>
             <li class="nav-item"><a
                 href="#"
-                class="nav-link mx-4 text-muted"
-              >Pricing</a></li>
+                class="nav-link link-light mx-4"
+              >Twitter</a></li>
             <li class="nav-item"><a
                 href="#"
-                class="nav-link mx-4 text-muted"
+                class="nav-link link-light mx-4"
               >FAQs</a></li>
           </ul>
-          <p class="text-center text-muted mt-2 mb-5">© 2022 Los Botanicos SS, Inc</p>
+          <p class="text-center mt-2 mb-5 fs-6">© 2022 Los Botanicos SA, Inc</p>
 
         </nav>
       </div>
