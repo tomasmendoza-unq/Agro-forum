@@ -18,5 +18,5 @@ app.get('*', homeController.notfound)
 app.get('/', LoginController.login)
 
 app.listen(port)
-console.log("Esta ejecutando el server " + port)
+console.log("Esta ejecutando el server: " + "http://localhost:"+port)
 
