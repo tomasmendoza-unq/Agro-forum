@@ -1,7 +1,8 @@
-function Login(req, res) {
+
+function login(req, res) {
     res.render('login')
 }
 
 module.exports = {
-    login : Login,
+    Login : login
 }
