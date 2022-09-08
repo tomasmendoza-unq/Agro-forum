@@ -1,6 +1,7 @@
 const express = require('express')
 const homeController = require('./controller/homeController')
 const loginController = require('./controller/LoginController')
+const registerController = require('./controller/RegisterController')
 const app = express()
 const path = require('path')
 const port = 8000
@@ -15,7 +16,9 @@ app.set('view engine', 'hbs');
 
 app.get('/', homeController.home)
 
-app.get('/login', loginController.Login)
+app.get('/login', loginController.login)
+
+app.get('/register', registerController.register)
 
 app.get('*', homeController.notfound)
 

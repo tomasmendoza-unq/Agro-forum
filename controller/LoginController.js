@@ -4,5 +4,5 @@ function login(req, res) {
 }
 
 module.exports = {
-    Login : login
+    login : login
 }
