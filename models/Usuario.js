@@ -1,22 +1,41 @@
-const {Model, DataTypes, Model } = require('sequelize');
-const sequelize = new Sequelize('../db/connection.js');
-const  tipo= require ("../models/Tipo")
+const { Model, DataTypes} = require('sequelize');
+const sequelize = require('../db/Connection');
 
-class Usuario extends Model {}
+class usuarios extends Model {}
 
-User.init({
-    idusuario:{
+usuarios.init({
+    id_usuario:{
         type:DataTypes.INTEGER,
         primaryKey: true,
-
+        autoIncrement: true
     },
     nombre: DataTypes.STRING,
-    idTipo: DataTypes.INTEGER
+    apellido: DataTypes.STRING,
+    nom_usuario: DataTypes.STRING,
+    correo: DataTypes.STRING,
+    telefono: DataTypes.INTEGER,
+    createdAt: {
+        type: 'DATE',
+    },
+    updatedAt: {
+      type: 'DATETIME',
+    }
 },{
-  // Other model options go here
-  conexion, // We need to pass the connection instance
-  modelName: 'tipo' // We need to choose the model name
+  sequelize, 
+  modelName: 'Usuario' 
 });
 
-Animal.tipo= Animal.belongsTo(Tipo, {as: 'Tipo', forengkey:'idtipo'})
-modules.exports = tipoo;
+async function getAll(req, res) {
+  console.log("Pidiendo los datos de usuario");
+
+  let Usuarios = await usuarios.findAll();
+  let data = {
+    Usuarios
+}
+  res.render('usuario',data)
+}
+
+module.exports = {
+  usuarios,
+  getAll
+};

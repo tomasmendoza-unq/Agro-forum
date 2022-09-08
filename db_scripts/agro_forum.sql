@@ -106,7 +106,7 @@ CREATE TABLE `usuarios` (
   `correo` varchar(50) NOT NULL,
   `telefono` int(11) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updateAt` datetime NOT NULL
+  `updatedAt` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

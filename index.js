@@ -1,9 +1,10 @@
 const express = require('express')
+const app = express()
+const path = require('path')
 const homeController = require('./controller/homeController')
 const loginController = require('./controller/LoginController')
 const registerController = require('./controller/RegisterController')
-const app = express()
-const path = require('path')
+const UsuarioController = require('./models/Usuario')
 const port = 8000
 
 
@@ -19,6 +20,8 @@ app.get('/', homeController.home)
 app.get('/login', loginController.login)
 
 app.get('/register', registerController.register)
+
+app.get('/usuario', UsuarioController.getAll);
 
 app.get('*', homeController.notfound)
 
