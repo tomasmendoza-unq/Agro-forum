@@ -1,3 +1,30 @@
-body{
-    margin: 0px;
+body{ background-color: #e6e6e6; font-family: 'Hind Siliguri', sans-serif;  background-attachment: fixed; 
+} 
+
+button{
+  font-size: 20px !important;
 }
+.carousel-item{
+background-color: rgb(34, 48, 37); height: 38rem; } .overlay-image{
+opacity: 40%; 
+} 
+
+.navbar-fluid, footer{ background-color: #499b4a; color:
+white; font-weight:500; 
+} 
+
+.card, .card-login{ box-shadow: 0px 5px 10px 7px #0000003b; 
+}
+
+button {
+  font-weight:500;
+}
+
+.login-background-color{
+    background-color: antiquewhite;
+}
+
+.card-login{
+    background-color: rgba(255, 225, 225, 0.1);
+}
+
