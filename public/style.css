@@ -21,10 +21,16 @@ button {
 }
 
 .login-background-color{
-    background-color: antiquewhite;
+  background: rgb(73,155,74);
+  background: radial-gradient(circle, rgba(73,155,74,1) 0%, rgba(28,77,28,1) 94%);
 }
 
 .card-login{
-    background-color: rgba(255, 225, 225, 0.1);
-}
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.792);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
 
+}
