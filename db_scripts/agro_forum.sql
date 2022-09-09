@@ -31,7 +31,7 @@ CREATE TABLE `comentarios` (
   `id_comentarios` int(11) NOT NULL,
   `comentario_usuario` varchar(100) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updateAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `id_respuesta` int(11) NOT NULL,
   `id_post` int(11) NOT NULL
@@ -57,7 +57,7 @@ CREATE TABLE `plantas` (
   `tipo_planta` int(50) NOT NULL,
   `foto_planta` varchar(50) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updateAt` datetime NOT NULL
+  `updatedAt` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -79,7 +79,7 @@ CREATE TABLE `posteos` (
   `contenido_planta` varchar(150) NOT NULL,
   `fecha_publicacion` date NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updateAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `id_planta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
