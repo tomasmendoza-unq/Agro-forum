@@ -8,10 +8,10 @@ const homeController = require('./controller/homeController')
 const loginController = require('./controller/LoginController')
 const registerController = require('./controller/RegisterController')
 
-const UsuarioController = require('./models/Usuario')
-const PlantasController = require('./models/Planta')
-const PosteosController = require('./models/Posteo')
-const ComentariosController = require('./models/Comentario')
+const UsuarioController = require('./controller/UsuarioController')
+const PlantasController = require('./controller/PlantaController')
+const PosteosController = require('./controller/PosteoController')
+const ComentariosController = require('./controller/ComentarioController')
 
 
 

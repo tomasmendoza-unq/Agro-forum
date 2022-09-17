@@ -1,7 +1,7 @@
 const { Model, DataTypes,} = require('sequelize');
 const sequelize = require('../db/Connection.js');
 
-const comentarios = require('../models/Comentario')
+const {comentarios} = require('../models/Comentario')
 
 async function getAll(req, res) {
     console.log("Pidiendo los datos de los comentarios");

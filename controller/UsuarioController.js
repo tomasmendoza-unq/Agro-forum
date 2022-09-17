@@ -1,19 +1,20 @@
 const { Model, DataTypes,} = require('sequelize');
 const sequelize = require('../db/Connection.js');
 
-const Usuarios = require('../models/Usuario')
+const {usuarios} = require('../models/Usuario')
 
 async function getAll(req, res) {
     console.log("Pidiendo los datos de usuario");
 
-    let usuarios = await Usuarios.findAll();
+    let users = await usuarios.findAll();
+
 
     let data = {
-        usuarios
+        Usuarios : users
     }
     res.render('usuario',data)
 }
 
-module.exports= {
+module.exports = {
     getAll
-}
+  };

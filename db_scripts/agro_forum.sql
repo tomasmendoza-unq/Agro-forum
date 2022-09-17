@@ -41,7 +41,7 @@ CREATE TABLE `comentarios` (
 -- Dumping data for table `comentarios`
 --
 
-INSERT INTO `comentarios` (`id_comentarios`, `comentario_usuario`, `createdAt`, `updateAt`, `id_usuario`, `id_respuesta`, `id_post`) VALUES
+INSERT INTO `comentarios` (`id_comentarios`, `comentario_usuario`, `createdAt`, `updatedAt`, `id_usuario`, `id_respuesta`, `id_post`) VALUES
 (1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ligula ullamcorper, sagittis le', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
 (2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0);
 
@@ -64,7 +64,7 @@ CREATE TABLE `plantas` (
 -- Dumping data for table `plantas`
 --
 
-INSERT INTO `plantas` (`id_planta`, `nombre_planta`, `tipo_planta`, `foto_planta`, `createdAt`, `updateAt`) VALUES
+INSERT INTO `plantas` (`id_planta`, `nombre_planta`, `tipo_planta`, `foto_planta`, `createdAt`, `updatedAt`) VALUES
 (1, 'nopales', 0, 'fotitoplantauwu.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 'helecho', 0, 'fotoplantitaowo.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
@@ -88,7 +88,7 @@ CREATE TABLE `posteos` (
 -- Dumping data for table `posteos`
 --
 
-INSERT INTO `posteos` (`id_post`, `contenido_planta`, `fecha_publicacion`, `createdAt`, `updateAt`, `id_usuario`, `id_planta`) VALUES
+INSERT INTO `posteos` (`id_post`, `contenido_planta`, `fecha_publicacion`, `createdAt`, `updatedAt`, `id_usuario`, `id_planta`) VALUES
 (1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ligula ullamcorper, sagittis lectus et, sagittis dui.', '0000-00-00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0),
 (2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ligula ullamcorper, sagittis lectus et, sagittis dui. Maecenas posuere tempus urn', '0000-00-00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0);
 
@@ -113,7 +113,7 @@ CREATE TABLE `usuarios` (
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `nom_usuario`, `correo`, `telefono`, `createdAt`, `updateAt`) VALUES
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `nom_usuario`, `correo`, `telefono`, `createdAt`, `updatedAt`) VALUES
 (1, 'Federico', 'Pugliese', 'fedeeP09', 'fedepugli123@gmail.com', 24680846, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 'Lionel', 'Alberti', 'liober89', 'lionelelmascapito9000@gmail.com', 13570842, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 

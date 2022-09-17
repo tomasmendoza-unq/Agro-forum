@@ -14,28 +14,13 @@ usuarios.init({
     nom_usuario: DataTypes.STRING,
     correo: DataTypes.STRING,
     telefono: DataTypes.INTEGER,
-    createdAt: {
-        type: 'DATE',
-    },
-    updatedAt: {
-      type: 'DATETIME',
-    }
+    
 },{
   sequelize, 
   modelName: 'Usuario' 
 });
 
-async function getAll(req, res) {
-  console.log("Pidiendo los datos de usuario");
-
-  let Usuarios = await usuarios.findAll();
-  let data = {
-    Usuarios
-}
-  res.render('usuario',data)
-}
 
 module.exports = {
-  usuarios,
-  getAll
+  usuarios
 };
