@@ -1,4 +1,5 @@
 body{ background-color: #e6e6e6; font-family: 'Hind Siliguri', sans-serif;  background-attachment: fixed; 
+  
 } 
 
 button{
@@ -25,12 +26,24 @@ button {
   background: radial-gradient(circle, rgba(73,155,74,1) 0%, rgba(28,77,28,1) 94%);
 }
 
-.card-login{
-/* From https://css.glass */
-background: rgba(255, 255, 255, 0.792);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(20px);
--webkit-backdrop-filter: blur(20px);
+.card-color{
+  background: rgba(255, 255, 255, 0.549);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(127, 123, 123, 0.549);
+}
 
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+} 
+
+.card-login{
+  padding-right: 0%;
+  padding-left: 0%;
+  padding-bottom: 0%;
+}
+.input-group-text{
+  color: white;
+  background-color: #198754;
 }
