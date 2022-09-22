@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2022 at 11:30 PM
+-- Generation Time: Sep 22, 2022 at 11:35 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -115,8 +115,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `nom_usuario`, `password`, `correo`, `telefono`, `createdAt`, `updateAt`) VALUES
-(1, 'Federico', 'Pugliese', 'fedeeP09', '', 'fedepugli123@gmail.com', 24680846, '2022-09-22 21:28:37', '2020-01-01 18:28:35'),
-(2, 'Lionel', 'Alberti', 'liober89', '', 'lionelelmascapito9000@gmail.com', 13570842, '2022-09-22 21:28:40', '2020-01-01 18:28:38');
+(1, 'Federico', 'Pugliese', 'fedeeP09', '12345', 'fedepugli123@gmail.com', 24680846, '2022-09-22 21:34:20', '2020-01-01 18:28:35'),
+(2, 'Lionel', 'Alberti', 'liober89', '12345', 'lionelelmascapito9000@gmail.com', 13570842, '2022-09-22 21:34:23', '2020-01-01 18:28:38');
 
 --
 -- Indexes for dumped tables
