@@ -4,7 +4,7 @@ const { Sequelize } = require('sequelize');
 const db = new Sequelize('agro-forum', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
-  loggin: true
+  loggin: false
 });
 
 /* esto es para comprobar si la conexion con la base de datos es exitosa

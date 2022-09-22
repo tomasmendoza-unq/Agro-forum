@@ -1,6 +1,8 @@
+//inicializadores
 const express = require('express')
 const app = express()
 const path = require('path')
+// const passport= require('passport')
 const port = 8000
 
 const homeController = require('./controller/homeController')
@@ -16,17 +18,27 @@ const ComentariosController = require('./controller/ComentarioController')
 
 
 
+
+
+//configuracion
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
 
 
+//
+
+app.use(express.urlencoded({extended: false}));
+// app.use(passport.initialize());
+// app.use(passport.session());
+
 //redirecciones
 
-app.get('/', homeController.home)
+app.get('/', homeController.home);
 
-app.get('/login', loginController.login)
+app.get('/login', loginController.login);
 
-app.get('/register', registerController.register)
+app.post('/login', registerController.register);
 
 app.get('/usuario', UsuarioController.getAll);
 

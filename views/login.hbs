@@ -53,10 +53,10 @@
       crossorigin="anonymous"
     ></script>
 
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center  ">
       <div class="row vh-100 align-items-center justify-content-center">
-        <div class=" card-color card-login rounded p-3 col-sm-6 col-md-4 col-lg-4">
-            <img src="/img/logo-agro-forum-agro-color.png" alt="planta feliz" width="50%"  height="auto" class="img-fluid mb-2">
+        <div class=" card-color card-login rounded p-3 col-sm-9 col-md-6 col-lg-4">
+            <img src="/img/logo-agro-forum-agro-color.png" alt="planta feliz" width="30%"  height="auto" class="img-fluid mb-2">
             <form>
               <div class="mb-1">
                 <h2 class="mb-3">Bienvenido devuelta!</h2>
@@ -120,15 +120,15 @@
 <div class="model-body">
   
 </div>
-<form >
+<form action="/login" method="POST">
   <div class="row g-3 mb-3">
   <div class="col-md-6">
     <label for="validationDefault01" class="form-label"> <em>Nombre</em> </label>
-    <input type="text" class="form-control" id="validationDefault01"  required>
+    <input type="text" class="form-control" id="validationDefault01" name="nombre" required>
   </div>
   <div class="col-md-6">
     <label for="validationDefault02" class="form-label"> <em>Apellido</em> </label>
-    <input type="text" class="form-control" id="validationDefault02" required>
+    <input type="text" class="form-control" id="validationDefault02" name="apellido" required>
   </div>
   </div>
 
@@ -137,7 +137,7 @@
       <i class="fa-user">
       <label for="validationDefaultUsername" class="form-label">Nombre de usuario</label>
       </i>
-      <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+      <input type="text" class="form-control" id="validationDefaultUsername" name="nom_usuario"  aria-describedby="inputGroupPrepend2" required>
     </div>
 
   </div>
@@ -147,36 +147,29 @@
       <i class="fa-lock">
       <label for="validationDefaultUsername" class="form-label">Contraseña</label>
       </i>
-      <input type="password" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+      <input type="password" class="form-control" id="validationDefaultUsername" name="contraseña" aria-describedby="inputGroupPrepend2" required>
     </div>
 
     <div class="col-md-6">
       <i class="">
       <label for="validationDefaultUsername" class="form-label">Repita su contraseña</label>
       </i>
-      <input type="password" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+      <input type="password" name="contraseña2" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
     </div>
 
   </div>
   <div class="row g-3 mb-3">
     <div class="col-md-6">
     <label for="validationDefault03" class="form-label">  <i class="fa-thin fa-phone"> Numero de telefono</i></label>
-    <input type="tel" class="form-control" id="validationDefault03" required>
+    <input type="tel" class="form-control" id="validationDefault03" name="num_telefono" required>
     </div>
-
-
-
+        <div class="col-md-6">
+        <label class="form-label"> <i class=" fa-calendar"> Correo Electronico</i></label>
+        <input type="email" class="form-control" name="correo" required>
+    </div>
   </div>
 
 
-  <div class="row g-3 mb-3">
-    <div class="col">
-      <div class="col-md-6">
-        <label class="form-label"> <i class=" fa-calendar"> Fecha de nacimiento</i></label>
-        <input type="date" class="form-control" required>
-      </div>
-    </div>  
-  </div>
   
   <div class="row g-3 mt-2  pt-2">
     <div class="col-md-12">
