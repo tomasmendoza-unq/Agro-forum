@@ -103,6 +103,7 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(50) NOT NULL,
   `nom_usuario` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
   `correo` varchar(50) NOT NULL,
   `telefono` int(11) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),

@@ -11,7 +11,7 @@ usuarios.init({
     },
     nombre: DataTypes.STRING,
     apellido: DataTypes.STRING,
-    contraseña: DataTypes.STRING,
+    password: DataTypes.STRING,
     nom_usuario: DataTypes.STRING,
     correo: DataTypes.STRING,
     telefono: DataTypes.INTEGER,
