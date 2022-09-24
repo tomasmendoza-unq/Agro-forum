@@ -31,7 +31,7 @@ CREATE TABLE `comentarios` (
   `id_comentarios` int(11) NOT NULL,
   `comentario_usuario` varchar(100) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updateAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `id_respuesta` int(11) NOT NULL,
   `id_post` int(11) NOT NULL
@@ -41,7 +41,7 @@ CREATE TABLE `comentarios` (
 -- Dumping data for table `comentarios`
 --
 
-INSERT INTO `comentarios` (`id_comentarios`, `comentario_usuario`, `createdAt`, `updateAt`, `id_usuario`, `id_respuesta`, `id_post`) VALUES
+INSERT INTO `comentarios` (`id_comentarios`, `comentario_usuario`, `createdAt`, `updatedAt`, `id_usuario`, `id_respuesta`, `id_post`) VALUES
 (1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ligula ullamcorper, sagittis le', '2022-09-22 21:29:51', '2020-01-01 18:29:50', 0, 0, 0),
 (2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '2022-09-22 21:29:54', '2020-01-01 18:29:53', 0, 0, 0);
 
@@ -57,14 +57,14 @@ CREATE TABLE `plantas` (
   `tipo_planta` int(50) NOT NULL,
   `foto_planta` varchar(50) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updateAt` datetime NOT NULL
+  `updatedAt` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `plantas`
 --
 
-INSERT INTO `plantas` (`id_planta`, `nombre_planta`, `tipo_planta`, `foto_planta`, `createdAt`, `updateAt`) VALUES
+INSERT INTO `plantas` (`id_planta`, `nombre_planta`, `tipo_planta`, `foto_planta`, `createdAt`, `updatedAt`) VALUES
 (1, 'nopales', 0, 'fotitoplantauwu.png', '2022-09-22 21:29:37', '2020-01-01 18:29:36'),
 (2, 'helecho', 0, 'fotoplantitaowo.png', '2022-09-22 21:29:39', '2020-01-01 18:29:38');
 
@@ -79,7 +79,7 @@ CREATE TABLE `posteos` (
   `contenido_planta` varchar(150) NOT NULL,
   `fecha_publicacion` date NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updateAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `id_planta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -88,7 +88,7 @@ CREATE TABLE `posteos` (
 -- Dumping data for table `posteos`
 --
 
-INSERT INTO `posteos` (`id_post`, `contenido_planta`, `fecha_publicacion`, `createdAt`, `updateAt`, `id_usuario`, `id_planta`) VALUES
+INSERT INTO `posteos` (`id_post`, `contenido_planta`, `fecha_publicacion`, `createdAt`, `updatedAt`, `id_usuario`, `id_planta`) VALUES
 (1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ligula ullamcorper, sagittis lectus et, sagittis dui.', '2020-01-01', '2022-09-22 21:30:07', '2020-01-01 18:29:04', 0, 0),
 (2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ligula ullamcorper, sagittis lectus et, sagittis dui. Maecenas posuere tempus urn', '2020-01-01', '2022-09-22 21:30:10', '2020-01-01 18:29:07', 0, 0);
 
@@ -107,14 +107,14 @@ CREATE TABLE `usuarios` (
   `correo` varchar(50) NOT NULL,
   `telefono` int(11) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `updateAt` datetime NOT NULL
+  `updatedAt` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `nom_usuario`, `password`, `correo`, `telefono`, `createdAt`, `updateAt`) VALUES
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `nom_usuario`, `password`, `correo`, `telefono`, `createdAt`, `updatedAt`) VALUES
 (1, 'Federico', 'Pugliese', 'fedeeP09', '12345', 'fedepugli123@gmail.com', 24680846, '2022-09-22 21:34:20', '2020-01-01 18:28:35'),
 (2, 'Lionel', 'Alberti', 'liober89', '12345', 'lionelelmascapito9000@gmail.com', 13570842, '2022-09-22 21:34:23', '2020-01-01 18:28:38');
 
