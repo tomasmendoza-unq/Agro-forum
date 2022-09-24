@@ -2,6 +2,7 @@
 const express = require('express')
 const app = express()
 const path = require('path')
+const session = require('express-session')
 // const passport= require('passport')
 const port = 8000
 
@@ -16,21 +17,20 @@ const PosteosController = require('./controller/PosteoController')
 const ComentariosController = require('./controller/ComentarioController')
 
 
-
-
-
-
 //configuracion
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
+app.use(session({
+  secret: 'botanicos',
+  resave: false,
+  saveUninitialized: true,
+}))
 
 
 //
 
 app.use(express.urlencoded({extended: false}));
-// app.use(passport.initialize());
-// app.use(passport.session());
 
 //redirecciones
 
