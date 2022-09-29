@@ -34,9 +34,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Style pagina principal -->
-    <style>
-    </style>
 
     <!-- Barra de navegacion -->
     <nav class="navbar-fluid">
@@ -66,20 +63,29 @@
               </form>
             </div>
           </div>
-          <div class="col-lg-4 text-center mt-3">
+          <div class="col-lg-4 text-center mt-3" >
             <ul class="nav justify-content-end fs-5">
+              {{# if loggedin}}
               <li class="nav-item">
-                <a
-                  class="nav-link link-light btn btn-outline-white me-2"
-                  href="/login"
-                >Login</a>
+              <a
+                class="nav-link link-light btn btn-outline-white me-2"
+                href="/perfil"
+              >Pefil</a>
               </li>
+              {{else }}
+              <li class="nav-item">
+              <a
+                class="nav-link link-light btn btn-outline-white me-2"
+                href="/login"
+              >Login</a>
+              </li>
+              {{/if}}
               <div class="vr bg-light m-2"></div>
               <li class="nav-item">
                 <a
                   class="nav-link link-light btn btn-outline-white me-2"
-                  href="/usuario"
-                >Agro-Tops</a>
+                  href="/posteos"
+                >Posteos</a>
               </li>
               <div class="vr bg-light m-2"></div>
               <li class="nav-item">
@@ -366,6 +372,5 @@
         </nav>
       </div>
     </footer>
-
   </body>
 </html>

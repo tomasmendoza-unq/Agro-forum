@@ -57,16 +57,16 @@
       <div class="row vh-100 align-items-center justify-content-center">
         <div class=" card-color card-login rounded p-3 col-sm-9 col-md-6 col-lg-4">
             <img src="/img/logo-agro-forum-agro-color.png" alt="planta feliz" width="30%"  height="auto" class="img-fluid mb-2">
-            <form>
+            <form action="/" method="post">
               <div class="mb-1">
                 <h2 class="mb-3">Bienvenido devuelta!</h2>
-                <label for="Email" class="form-label lead">Correo Electronico / Nombre de usuario</label>
+                <label for="Email" class="form-label lead">Correo Electronico</label>
             
                 <div class="row">
                 <div class="col-md-2">
                 </div>
                 <div class="col-md-8">
-                  <input type="email" class="form-control rounded-3 ps-1 mb-1 text-center" id="Email" aria-describedby="emailHelp">
+                  <input type="email" class="form-control rounded-3 ps-1 mb-1 text-center" name="email" id="Email" aria-describedby="emailHelp">
                 </div>
                 <div class="col-md-2">
                 </div>
@@ -79,7 +79,7 @@
                 <div class="row">
                   <div class="col-md-2"></div>
                   <div class="col-md-8">
-                    <input type="password" class="form-control rounded-3 ps-1  text-center" id="Password">
+                    <input type="password" class="form-control rounded-3 ps-1 text-center" name="contraseña" id="Password">
                   </div>
                   <div class="col-md-2"></div>
                 </div>
@@ -94,7 +94,7 @@
 
               <div class="">
               <button type="submit" class="btn btn-success mb-3">
-                <a href="/" class="nav-link link-light">Ingresar!</a>
+                <a class="nav-link link-light">Ingresar!</a>
               </button>                
               </div>
 
@@ -117,79 +117,79 @@
       <div class="modal-header text-center justify-content-center  mb-3">
         <h5 class="modal-title text-center lead fs-4" id="exampleModalLabel">Planta tu primera semilla en Agro Forum !</h5>
       </div>
-<div class="model-body">
+      <div class="model-body">
   
-</div>
-<form action="/login" method="POST">
-  <div class="row g-3 mb-3">
-  <div class="col-md-6">
-    <label for="validationDefault01" class="form-label"> <em>Nombre</em> </label>
-    <input type="text" class="form-control" id="validationDefault01" name="nombre" required>
-  </div>
-  <div class="col-md-6">
-    <label for="validationDefault02" class="form-label"> <em>Apellido</em> </label>
-    <input type="text" class="form-control" id="validationDefault02" name="apellido" required>
-  </div>
-  </div>
+        </div>
+        <form action="/login" method="POST">
+          <div class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label for="validationDefault01" class="form-label"> <em>Nombre</em> </label>
+            <input type="text" class="form-control" id="validationDefault01" name="nombre" required>
+          </div>
+          <div class="col-md-6">
+            <label for="validationDefault02" class="form-label"> <em>Apellido</em> </label>
+            <input type="text" class="form-control" id="validationDefault02" name="apellido" required>
+          </div>
+          </div>
 
-  <div class="row g-3 mb-3">
-    <div class="col-md-6">
-      <i class="fa-user">
-      <label for="validationDefaultUsername" class="form-label">Nombre de usuario</label>
-      </i>
-      <input type="text" class="form-control" id="validationDefaultUsername" name="nom_usuario"  aria-describedby="inputGroupPrepend2" required>
-    </div>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <i class="fa-user">
+              <label for="validationDefaultUsername" class="form-label">Nombre de usuario</label>
+              </i>
+              <input type="text" class="form-control" id="validationDefaultUsername" name="nom_usuario"  aria-describedby="inputGroupPrepend2" required>
+            </div>
 
-  </div>
+          </div>
 
-  <div class="row g-3 mb-3">
-    <div class="col-md-6">
-      <i class="fa-lock">
-      <label for="validationDefaultUsername" class="form-label">Contraseña</label>
-      </i>
-      <input type="password" class="form-control" id="validationDefaultUsername" name="contraseña" aria-describedby="inputGroupPrepend2" required>
-    </div>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <i class="fa-lock">
+              <label for="validationDefaultUsername" class="form-label">Contraseña</label>
+              </i>
+              <input type="password" class="form-control" id="validationDefaultUsername" name="contraseña" aria-describedby="inputGroupPrepend2" required>
+            </div>
 
-    <div class="col-md-6">
-      <i class="">
-      <label for="validationDefaultUsername" class="form-label">Repita su contraseña</label>
-      </i>
-      <input type="password" name="contraseña2" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
-    </div>
+            <div class="col-md-6">
+              <i class="">
+              <label for="validationDefaultUsername" class="form-label">Repita su contraseña</label>
+              </i>
+              <input type="password" name="contraseña2" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+            </div>
 
-  </div>
-  <div class="row g-3 mb-3">
-    <div class="col-md-6">
-    <label for="validationDefault03" class="form-label">  <i class="fa-thin fa-phone"> Numero de telefono</i></label>
-    <input type="tel" class="form-control" id="validationDefault03" name="num_telefono" required>
-    </div>
-        <div class="col-md-6">
-        <label class="form-label"> <i class=" fa-calendar"> Correo Electronico</i></label>
-        <input type="email" class="form-control" name="correo" required>
-    </div>
-  </div>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+            <label for="validationDefault03" class="form-label">  <i class="fa-thin fa-phone"> Numero de telefono</i></label>
+            <input type="tel" class="form-control" id="validationDefault03" name="num_telefono" required>
+            </div>
+                <div class="col-md-6">
+                <label class="form-label"> <i class=" fa-calendar"> Correo Electronico</i></label>
+                <input type="email" class="form-control" name="correo" required>
+            </div>
+          </div>
 
 
-  
-  <div class="row g-3 mt-2  pt-2">
-    <div class="col-md-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-      <label class="form-check-label" for="invalidCheck2">
-       Acepto los terminos y condiciones
-      </label>
-    </div>
+          
+          <div class="row g-3 mt-2  pt-2">
+            <div class="col-md-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+              <label class="form-check-label" for="invalidCheck2">
+              Acepto los terminos y condiciones
+              </label>
+            </div>
 
-    </div> 
-  </div>
- 
-  <div class="row g-3">
-    <button class="btn btn-success" type="submit">Registrarse</button>
-  </div>
-  
+            </div> 
+          </div>
+        
+          <div class="row g-3">
+            <button class="btn btn-success" type="submit">Registrarse</button>
+          </div>
+          
 
-  </div>
-</form>
+          </div>
+        </form>
 
       </div>
     </div>
