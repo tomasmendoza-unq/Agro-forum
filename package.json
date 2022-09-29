@@ -12,6 +12,7 @@
   "author": "leopoldo109",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "hbs": "^4.2.0",

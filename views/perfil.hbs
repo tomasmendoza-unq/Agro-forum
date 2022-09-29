@@ -7,11 +7,12 @@
     <title>Usuario</title>
 </head>
 <body>
-    <h1>Hola</h1>
-    <ul class="people_list">
-    {{#each Usuarios}}
-        <li>{{apellido}}</li>
-    {{/each}}
-</ul>
+    <h1>Bienvenido</h1>
+    {{#Usuarios}}
+        <h2>{{nom_usuario}}</h2>
+        <h3>Datos personales</h3>
+        <input type="text" name="" id="">
+    {{/Usuarios}}
+    <a href="/logout">logout</a>
 </body>
 </html>
