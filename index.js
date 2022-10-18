@@ -14,9 +14,7 @@ const LogoutController = require('./controller/LogoutController')
 const PerfilController = require('./controller/PerfilController')
 const PlantasController = require('./controller/PlantaController')
 const PosteosController = require('./controller/PosteoController')
-const ComentariosController = require('./controller/ComentarioController')
 
-//configuracion
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
 app.use(session({
