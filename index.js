@@ -4,10 +4,6 @@ const app = express()
 const path = require('path')
 const session = require('express-session')
 const port = 8000
-const { Model, DataTypes} = require('sequelize');
-const sequelize = require('./db/Connection.js');
-
-const {usuarios} = require('./models/Usuario')
 
 const homeController = require('./controller/homeController')
 
@@ -20,25 +16,24 @@ const PlantasController = require('./controller/PlantaController')
 const PosteosController = require('./controller/PosteoController')
 const ComentariosController = require('./controller/ComentarioController')
 
-
+//configuracion
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
 app.use(session({
   secret: 'botanicos',
   resave: false,
   saveUninitialized: true,
-}))
-
-//
+}));
 
 app.use(express.urlencoded({extended: false}));
+
+
 
 
 
 //redirecciones
 
 app.get('/', homeController.home);
-
 
 app.get('/login', loginController.login)
 
@@ -48,7 +43,9 @@ app.post('/', loginController.logeo);
 
 app.get('/plantas', PlantasController.getAll);
 
-app.get('/perfil', PerfilController.getAll)
+app.get('/perfil', PerfilController.getAll);
+
+app.get('/crear', PosteosController.vCrear);
 
 app.get('/posteos', PosteosController.getAll);
 

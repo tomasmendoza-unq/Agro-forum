@@ -11,20 +11,17 @@ function login(req, res) {
 async function logeo(req, res){
     const datos = req.body;
     let user = await usuarios.findOne({ where: { correo: datos.email} });
-    console.log(user)
-    req.session.user= user.id_usuario;
     if (!user) {
         res.send('ingreso el usuario no existee')
     }else if (datos.contraseña !== user.password){
         res.send('ingreso mal la contraseña');
     }else{
+        req.session.user= user.id_usuario;
         let loggedin= true
         let log= {
             loggedin
         }
         console.log(req.session.user);
-        // res.write(`<p>bienvenido ${user.nom_usuario}</p>`);
-        // res.write('<a href="/"> ir al index</a>')
         res.render("index", log)
     }
 }
