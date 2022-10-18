@@ -15,6 +15,7 @@ const PerfilController = require('./controller/PerfilController')
 const PlantasController = require('./controller/PlantaController')
 const PosteosController = require('./controller/PosteoController')
 
+// configuracion
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
 app.use(session({
@@ -25,8 +26,7 @@ app.use(session({
 
 app.use(express.urlencoded({extended: false}));
 
-
-
+//subir archivos
 
 
 //redirecciones
@@ -35,13 +35,15 @@ app.get('/', homeController.home);
 
 app.get('/login', loginController.login)
 
-app.post('/login', registerController.register);
+app.post('/login', registerController.upload ,registerController.register);
 
 app.post('/', loginController.logeo);
 
 app.get('/plantas', PlantasController.getAll);
 
 app.get('/perfil', PerfilController.getAll);
+
+app.post('/perfil', PerfilController.upload ,PerfilController.updat);
 
 app.get('/crear', PosteosController.vCrear);
 

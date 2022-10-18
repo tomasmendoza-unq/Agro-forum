@@ -54,11 +54,12 @@
     <div class="d-flex container-fluid justify-content-center mt-5  ">
       <div class="row colorperfil rounded text-white">
         <div class="col-lg-4 align-self-center pt-4 pb-4 ">
-         <img class="img-fluid rounded-circle mx-auto d-block shadow" src="/img/logo2.jpg" alt="" style="width: 250px;"> 
+          {{#Usuarios}}
+         <img class="img-fluid rounded-circle mx-auto d-block shadow" src="{{img}}" alt="" style="width: 250px;"> 
         </div>
         <div class="col-lg-6 align-self-center">
           <!-- Informacion personal--> 
-              {{#Usuarios}}
+
           <div class="text-center mt-3 ">
             <h1 class="lead fs-1 text-uppercase">{{nom_usuario}}</h1>
           </div>
@@ -85,22 +86,22 @@
     </div>  
 
 
-<!-- Modal Register -->
+<!-- Update de registro -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content p-3 mt-2  card-login card-color">
       <div class="model-body">
         </div>
-        <form>
-
+        <form action="/perfil" method="POST" enctype="multipart/form-data">
+          {{#Usuarios}}
           <div class="row g-3 mb-3">
           <div class="col-md-6">
             <label for="validationDefault01" class="form-label"> <em>Nombre</em> </label>
-            <input type="text" class="form-control" id="validationDefault01" name="nombre" required>
+            <input type="text" class="form-control" value="{{nombre}}" id="validationDefault01" name="nombre" required>
           </div>
           <div class="col-md-6">
             <label for="validationDefault02" class="form-label"> <em>Apellido</em> </label>
-            <input type="text" class="form-control" id="validationDefault02" name="apellido" required>
+            <input type="text" class="form-control" value="{{apellido}}" id="validationDefault02" name="apellido" required>
           </div>
           </div>
 
@@ -109,7 +110,18 @@
               <i class="fa-user">
               <label for="validationDefaultUsername" class="form-label">Nombre de usuario</label>
               </i>
-              <input type="text" class="form-control" id="validationDefaultUsername" name="nom_usuario"  aria-describedby="inputGroupPrepend2" required>
+              <input type="text" class="form-control" value="{{nom_usuario}}" id="validationDefaultUsername" name="nom_usuario"  aria-describedby="inputGroupPrepend2" required>
+            </div>
+            <div class="col-md-6">
+              <label for="validationDefaultUsername" class="form-label">Cambiar imagen</label>
+              <input
+                    type="file"
+                    class="form-control"
+                    placeholder="img"
+                    aria-label="Dollar amount (with dot and two decimal places)"
+                    aria-describedby="basic-addon1"
+                    name="avatar"
+                />
             </div>
           </div>
 
@@ -131,11 +143,11 @@
           <div class="row g-3 mb-3">
             <div class="col-md-6">
             <label for="validationDefault03" class="form-label">  <i class="fa-thin fa-phone"> Numero de telefono</i></label>
-            <input type="tel" class="form-control" id="validationDefault03" name="num_telefono" required>
+            <input type="tel" class="form-control" value="{{telefono}}" id="validationDefault03" name="num_telefono" required>
             </div>
                 <div class="col-md-6">
                 <label class="form-label"> <i class=" fa-calendar"> Correo Electronico</i></label>
-                <input type="email" class="form-control" name="correo" required>
+                <input type="email" value="{{correo}}" class="form-control" name="correo" required>
             </div>
           </div>
         
@@ -143,8 +155,8 @@
             <button class="btn btn-success" type="submit">Guardar cambios</button>
           </div>
           </div>
+        {{/Usuarios}}
         </form>
-
       </div>
     </div>
   </div>

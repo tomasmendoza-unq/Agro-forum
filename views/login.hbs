@@ -126,7 +126,7 @@
       <div class="model-body">
   
         </div>
-        <form action="/login" method="POST">
+        <form action="/login" method="POST"  enctype="multipart/form-data">
           <div class="row g-3 mb-3">
           <div class="col-md-6">
             <label for="validationDefault01" class="form-label"> <em>Nombre</em> </label>
@@ -145,7 +145,17 @@
               </i>
               <input type="text" class="form-control" id="validationDefaultUsername" name="nom_usuario"  aria-describedby="inputGroupPrepend2" required>
             </div>
-
+            <div class="col-md-6">
+              <label for="validationDefaultUsername" class="form-label">Cambiar imagen</label>
+              <input
+                    type="file"
+                    class="form-control"
+                    placeholder="img"
+                    aria-label="Dollar amount (with dot and two decimal places)"
+                    aria-describedby="basic-addon1"
+                    name="avatar"
+                />
+            </div>
           </div>
 
           <div class="row g-3 mb-3">

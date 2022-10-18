@@ -14,6 +14,7 @@ usuarios.init({
     password: DataTypes.STRING,
     nom_usuario: DataTypes.STRING,
     correo: DataTypes.STRING,
+    img: DataTypes.STRING,
     telefono: DataTypes.INTEGER,
     
 },{
