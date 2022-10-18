@@ -98,12 +98,18 @@
               </button>                
               </div>
 
-              <button type="button" class="btn btn-success" 
+              <button type="button" class="btn btn-success mb-3" 
               data-bs-toggle="modal" data-bs-target="#exampleModal">
               Primera vez? Registrate acá!
               </button>
             
             </form>
+            {{# if error}}
+          <div class="alert alert-danger" role="alert">
+          Usuario o contraseña incorrecta
+          </div>
+            {{else}}
+            {{/if}}
         </div>
       </div>
     </div>
@@ -186,8 +192,7 @@
           <div class="row g-3">
             <button class="btn btn-success" type="submit">Registrarse</button>
           </div>
-          
-
+        
           </div>
         </form>
 

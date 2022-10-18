@@ -12,12 +12,20 @@ async function logeo(req, res){
     const datos = req.body;
     let user = await usuarios.findOne({ where: { correo: datos.email} });
     console.log(user)
-    req.session.user= user.id_usuario;
     if (!user) {
-        res.send('ingreso el usuario no existee')
+        let error= true
+        let log= {
+            error
+        }
+        res.render("login", log)
     }else if (datos.contraseña !== user.password){
-        res.send('ingreso mal la contraseña');
+        let error= true
+        let log= {
+            error
+        }
+        res.render("login", log)
     }else{
+        req.session.user= user.id_usuario;
         let loggedin= true
         let log= {
             loggedin
