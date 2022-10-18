@@ -13,9 +13,16 @@ background-color: rgb(34, 48, 37); height: 38rem; } .overlay-image{
 opacity: 40%; 
 } 
 
-.navbar-fluid, footer{ background-color: #499b4a; color:
+.navbar-fluid, .colorbase, 
+footer
+{ 
+background-color: #499b4a; color:
 white; font-weight:500; 
 } 
+
+.colorperfil{
+  background-color: #198754;
+}
 
 .card, .card-login{ box-shadow: 0px 5px 10px 7px #0000003b; 
 }
@@ -53,4 +60,8 @@ button {
 
 .info-container{
   background-color: #198754;
+}
+
+.vh-100 {
+  height: 70vh!important;
 }

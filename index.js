@@ -4,10 +4,7 @@ const app = express()
 const path = require('path')
 const session = require('express-session')
 const port = 8000
-const { Model, DataTypes} = require('sequelize');
-const sequelize = require('./db/Connection.js');
-
-const {usuarios} = require('./models/Usuario')
+const exphbs = require('express-handlebars');
 
 const homeController = require('./controller/homeController')
 
@@ -18,9 +15,12 @@ const LogoutController = require('./controller/LogoutController')
 const PerfilController = require('./controller/PerfilController')
 const PlantasController = require('./controller/PlantaController')
 const PosteosController = require('./controller/PosteoController')
-const ComentariosController = require('./controller/ComentarioController')
 
-
+// app.engine('handlebars', exphbs.engine({
+//   defaultLayout: 'main',
+//   layoutsDir: path.join(__dirname, 'views/layouts'),
+//   extname: '.hbs'
+// }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
 app.use(session({
@@ -38,7 +38,6 @@ app.use(express.urlencoded({extended: false}));
 //redirecciones
 
 app.get('/', homeController.home);
-
 
 app.get('/login', loginController.login)
 
