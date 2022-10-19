@@ -79,7 +79,7 @@
                 <div class="row">
                   <div class="col-md-2"></div>
                   <div class="col-md-8">
-                    <input type="password" class="form-control rounded-3 ps-1 text-center" name="contraseña" id="Password">
+                    <input type="password" class="form-control rounded-3 ps-1 text-center" name="contrasena" id="Password">
                   </div>
                   <div class="col-md-2"></div>
                 </div>
@@ -102,13 +102,12 @@
               data-bs-toggle="modal" data-bs-target="#exampleModal">
               Primera vez? Registrate acá!
               </button>
-            
+              <a href="/">volver</a>
             </form>
-            {{# if error}}
+            {{# if loggedin}}
           <div class="alert alert-danger" role="alert">
           Usuario o contraseña incorrecta
           </div>
-            {{else}}
             {{/if}}
         </div>
       </div>
@@ -163,7 +162,7 @@
               <i class="fa-lock">
               <label for="validationDefaultUsername" class="form-label">Contraseña</label>
               </i>
-              <input type="password" class="form-control" id="validationDefaultUsername" name="contraseña" aria-describedby="inputGroupPrepend2" required>
+              <input type="password" class="form-control" id="validationDefaultUsername" name="contrasena" aria-describedby="inputGroupPrepend2" required>
             </div>
 
             <div class="col-md-6">

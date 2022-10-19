@@ -5,11 +5,10 @@ const path = require('path')
 
 const { usuarios } = require('../models/Usuario.js');
 
-var destino = ""
+
 
 async function getAll(req, res,next) {
     if(req.session.user){
-        console.log("Pidiendo los datos del usuario");
         
         let Usuarios = await usuarios.findOne({ where: {id_usuario: req.session.user} });
     
@@ -21,6 +20,9 @@ async function getAll(req, res,next) {
         next()
     }
 }
+
+var destino = ""
+
 const storage = multer.diskStorage({
     destination : 'public/img/usuarios/',
     filename: (req, file, cb) => {
@@ -45,12 +47,21 @@ var upload = multer({storage: storage,
 
 async function updat(req, res) {
     const datos = req.body
-    let user = await usuarios.findOne({ where: { id_usuario: req.session.user} });
-        const use = await user.update(
+    let Usuarios = await usuarios.findOne({ where: { id_usuario: req.session.user} });
+    if(datos.contrasena !== Usuarios.password){
+        let logge= true
+        let log= {
+                logge,
+                Usuarios
+            }
+          res.render("perfil",log)
+    }
+    else{
+        const use = await Usuarios.update(
             {
                 nombre: datos.nombre, 
                 apellido: datos.apellido,
-                password: datos.contraseña,
+                password: datos.contrasena,
                 nom_usuario: datos.nom_usuario,
                 correo: datos.correo,
                 img: destino,
@@ -60,8 +71,13 @@ async function updat(req, res) {
               where: {id_usuario: req.session.user},
             }
           );
-          console.log(use)
-        res.send("registrado")
+          let loggedin= true
+          let log= {
+                  loggedin,
+                  Usuarios
+              }
+        res.render("perfil", log)
+    }
 }
 
 

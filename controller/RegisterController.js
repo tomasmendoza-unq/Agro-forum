@@ -37,7 +37,7 @@ async function register(req, res) {
           { 
               nombre: datos.nombre, 
               apellido: datos.apellido,
-              password: datos.contraseña,
+              password: datos.contrasena,
               nom_usuario: datos.nom_usuario,
               correo: datos.correo,
               img: destino,
