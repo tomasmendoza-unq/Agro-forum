@@ -1,8 +1,3 @@
-const { Model, DataTypes, update} = require('sequelize');
-const sequelize = require('../db/Connection.js');
-
-const { usuarios } = require('../models/Usuario.js');
-
 async function Home(req, res) {
     if(req.session.user){
         console.log(req.session.user)
