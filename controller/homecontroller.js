@@ -1,5 +1,9 @@
+const { Model, DataTypes, update} = require('sequelize');
+const sequelize = require('../db/Connection.js');
 
-function Home(req, res) {
+const { usuarios } = require('../models/Usuario.js');
+
+async function Home(req, res) {
     res.render('index')
 }
 

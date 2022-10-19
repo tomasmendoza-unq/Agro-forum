@@ -67,40 +67,43 @@
             <ul class="nav justify-content-end fs-5">
               {{# if loggedin}}
               <li class="nav-item">
-              <a
-                class="nav-link link-light btn btn-outline-white me-2"
-                href="/perfil"
-              >Mi perfil</a>
+
               </li>
-              <div class="vr bg-light m-2"></div>
-              <li class="nav-item">
+              <div class="vr bg-light mt-2 mb-2"></div>
+              <li class="nav-item pt-1">
                 <a
-                  class="nav-link link-light btn btn-outline-white me-2"
+                  class="nav-link link-light btn btn-outline-white "
                   href="/crear"
-                >Crear Posteo</a>
+                >Crear Post</a>
               </li>
               {{else }}
-              <li class="nav-item">
+              <li class="nav-item pt-1">
               <a
-                class="nav-link link-light btn btn-outline-white me-2"
+                class="nav-link link-light btn btn-outline-white "
                 href="/login"
               >Login</a>
               </li>
-              <div class="vr bg-light m-2"></div>
-              <li class="nav-item">
+              <div class="vr bg-light mt-2 mb-2"></div>
+              <li class="nav-item pt-1">
                 <a
-                  class="nav-link link-light btn btn-outline-white me-2"
+                  class="nav-link link-light btn btn-outline-white "
                   href="/plantas"
                 >Plants</a>
               </li>
               {{/if}}
-              <div class="vr bg-light m-2"></div>
-              <li class="nav-item">
+              <div class="vr bg-light mt-2 mb-2"></div>
+              <li class="nav-item pt-1">
                 <a
-                  class="nav-link link-light btn btn-outline-white me-2"
+                  class="nav-link link-light btn btn-outline-white "
                   href="/posteos"
-                >Posteos</a>
+                >Post's</a>
               </li>
+              <a  class="nav-link link-light btn btn-outline-white "href="/perfil">
+              {{#user}}
+              <img class="img-fluid rounded-circle mx-auto d-block shadow" src="{{img}}" alt="" style="width: 45px; height: 50px;">
+              {{/user}}
+              </li>
+              </a>
             </ul>
           </div>
         </div>

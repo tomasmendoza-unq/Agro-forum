@@ -28,7 +28,8 @@ async function logeo(req, res){
         req.session.user= user.id_usuario;
         let loggedin= true
         let log= {
-            loggedin
+            loggedin,
+            user
         }
         console.log(req.session.user);
         res.render("index", log)
