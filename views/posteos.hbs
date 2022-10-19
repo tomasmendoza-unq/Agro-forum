@@ -1,17 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posteos</title>
+<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/img/logo-agro-forum-agro-color.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/71/71199.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Agro forum</title>
 </head>
 <body>
-    <h1>Posteos</h1>
-    <ul class="people_list">
-    {{#each Posteos}}
-        <li>{{contenido_planta}}</li>
-    {{/each}}
-</ul>
+    <!-- Barra de navegacion -->
+    <nav class="navbar-fluid pb-2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 text-left mt-3">
+            <div class="container-fluid">
+              <a class="navbar-brand " href="/">
+                <img src="/img/logo-agro-forum-agro-black.png" alt="agro-logo" class="img-fluid" style="width:50px;">
+                <a href="" class="link-light text-decoration-none" style="font-size: 25px;">Agro Forum</a> 
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center mt-3">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control border form-control-success text-bg-white me-2"
+                  type="search"
+                  placeholder="Buscador"
+                  aria-label="Search"
+                />
+                <button
+                  class="link-light btn btn-outline-white"
+                  type="submit"
+                >Buscar</button>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+    </nav>
+
+   <!-- Seccion de posteos (en proceso) -->
+    <div class="container text-center mt-5 mb-5">
+      <div class="row g-2 justify-content-center">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card p-3 m-3 card-color" style="width:22rem; height: 32rem;">
+            <div class="card-body px-auto " >
+              <h3 class="card-title">Cosecha record de tomates en Tierra del fuego.</h3>
+              <p class="card-text">26/08/2022</p>
+              <img
+                src="/img/tomate.jpg"
+                class="card-img-top rounded"
+                alt="..."
+                style="height: 12rem;"
+              />
+              <p
+                class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
+              >TomatoLover21</p>
+              <p class="d-flex justify-con card-text">Cosecha record de tomates en Tierra del fuego.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card p-3 m-3 card-color" style="width:22rem; height: 32rem;">
+            <div class="card-body px-auto">
+              <h3 class="card-title">Nueva temporada de cultivos de soja en Mendoza, Argentina</h3>
+              <p class="card-text">26/08/2022</p>
+              <img
+                src="/img/card-image-example-2.jpg"
+                class="card-img-top rounded"
+                alt="..."
+              style="height: 12rem;"
+              />
+              <p
+                class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
+              >TomatoLover21</p>
+              <p class="card-text">Me gustan mucho la soja porque es fachera.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card p-3 m-3 card-color" style="width:22rem; height: 32rem;">
+            <div class="card-body px-auto">
+              <h3 class="card-title">Agro cultivos de paltas en mexico, fan de la vida</h3>
+              <p class="card-text">26/08/2022</p>
+              <img
+                src="/img/card-image-example-3.jpg"
+                class="card-img-top rounded"
+                alt="..."
+                style="height: 12rem;"
+              />
+              <p
+                class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
+              >TomatoLover21</p>
+              <p class="card-text">Me gustan mucho los paltas porque son verdes.</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <!-- Seccion de posteos (en proceso) -->
+    <div class="container text-center mt-5 mb-5">
+      <div class="row g-2 justify-content-center">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card p-3 m-3 card-color" style="width:22rem; height: 32rem;">
+            <div class="card-body px-auto " >
+              <h3 class="card-title">Cosecha record de tomates en Tierra del fuego.</h3>
+              <p class="card-text">26/08/2022</p>
+              <img
+                src="/img/tomate.jpg"
+                class="card-img-top rounded"
+                alt="..."
+                style="height: 12rem;"
+              />
+              <p
+                class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
+              >TomatoLover21</p>
+              <p class="d-flex justify-con card-text">Cosecha record de tomates en Tierra del fuego.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card p-3 m-3 card-color" style="width:22rem; height: 32rem;">
+            <div class="card-body px-auto">
+              <h3 class="card-title">Nueva temporada de cultivos de soja en Mendoza, Argentina</h3>
+              <p class="card-text">26/08/2022</p>
+              <img
+                src="/img/card-image-example-2.jpg"
+                class="card-img-top rounded"
+                alt="..."
+              style="height: 12rem;"
+              />
+              <p
+                class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
+              >TomatoLover21</p>
+              <p class="card-text">Me gustan mucho la soja porque es fachera.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="card p-3 m-3 card-color" style="width:22rem; height: 32rem;">
+            <div class="card-body px-auto">
+              <h3 class="card-title">Agro cultivos de paltas en mexico, fan de la vida</h3>
+              <p class="card-text">26/08/2022</p>
+              <img
+                src="/img/card-image-example-3.jpg"
+                class="card-img-top rounded"
+                alt="..."
+                style="height: 12rem;"
+              />
+              <p
+                class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
+              >TomatoLover21</p>
+              <p class="card-text">Me gustan mucho los paltas porque son verdes.</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="container mb-4">
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</div>
 </body>
 </html>

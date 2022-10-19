@@ -26,7 +26,7 @@
 
     <title>Mi perfil</title>
   </head>
-<body>
+<body >
     <!-- Scripts JS para Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -35,58 +35,92 @@
     ></script>
 
     <!-- Barra de navegacion -->
-    <nav class="navbar-fluid">
-      <div class="container-fluid pb-3 ">
+    <nav class="navbar-fluid pb-2">
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-4 text-left mt-3">
+          <div class="col-lg-6 text-left mt-3">
             <div class="container-fluid">
-              <a class="navbar-brand " href="/">
+              <a class="navbar-brand" href="/">
                 <img src="/img/logo-agro-forum-agro-black.png" alt="agro-logo" class="img-fluid" style="width:50px;">
-                <a href="/" class="link-light text-decoration-none" style="font-size: 25px;">Agro Forum</a> 
+                <a href="/" class="link-light text-decoration-none pt-5" style="font-size: 30px;">Home</a> 
               </a>
             </div>
+          </div>
+    
+          <div class=" col-lg-6 d-flex justify-content-end text-center mt-3" >
+            <ul class="nav fs-5">
+              {{# if loggedin}}
+              <li class="nav-item">
+              <a
+                class="nav-link link-light btn btn-outline-white me-2"
+                href="/perfil"
+              >Mi perfil</a>
+              </li>
+              <div class="vr bg-light m-2"></div>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-light btn btn-outline-white me-2"
+                  href="/crear"
+                >Crear Posteo</a>
+              </li>
+              {{else }}
+              <li class="nav-item">
+              <a
+                class="nav-link link-light btn btn-outline-white me-2"
+                href="/login"
+              >Desloguearse</a>
+              </li>
+              <div class="vr bg-light m-2"></div>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-light btn btn-outline-white me-2"
+                  href="/plantas"
+                >Plantas favoritas</a>
+              </li>
+              {{/if}}
+              <div class="vr bg-light m-2"></div>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-light btn btn-outline-white me-2"
+                  href="/posteos"
+                >Mis posteos</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </nav>
-
-    <!-- Foto y nombre de usuario -->
-    <div class="d-flex container-fluid justify-content-center mt-5  ">
-      <div class="row colorperfil rounded text-white">
-        <div class="col-lg-4 align-self-center pt-4 pb-4 ">
+    <div class="d-flex container justify-content-center my-5 ">
+      <div class="d-flex row colorperfil rounded text-white">
+        <div class="col-12 align-self-center pt-4 pb-4 ">
           {{#Usuarios}}
-         <img class="img-fluid rounded-circle mx-auto d-block shadow" src="{{img}}" alt="" style="width: 250px;"> 
+         <img class="img-fluid rounded mx-auto d-block shadow" src="{{img}}" alt="" style="width: 200px;"> 
         </div>
-        <div class="col-lg-6 align-self-center">
-          <!-- Informacion personal--> 
-
+        <div class="col-12 align-self-center">
           <div class="text-center mt-3 ">
             <h1 class="lead fs-1 text-uppercase">{{nom_usuario}}</h1>
           </div>
+              <!-- Informacion personal--> 
+              <div class="text-center">
               <h5 class="lead mb-3">Nombre: <b>{{nombre}}</b></h5>
               <h5 class="lead mb-3">Apellido: <b>{{apellido}}</b></h5>
               <h5 class="lead mb-3">Correo Electronico: <b>{{correo}}</b></h5>
               <h5 class="lead mb-3">Numero de telefono: <b>{{telefono}}</b></h5>
               {{/Usuarios}}
-        </div>
-<div class="">
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-success mb-3 ms-3" 
-              data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Modificar datos de usuario
-              </button>   
-
-</div>
-      </div>
-      <div class="row colorperfil rounded text-white">
-        <div class="col-6">
+              </div>
 
         </div>
+        <div class="col-4"></div>
+        <div class="col-4 mb-3 d-flex justify-content-center">
+          <button type="button" class="btn btn-danger ms-4 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Modificar datos de usuario
+          </button> </div>
+        <div class="col-4 align-self-center "></div>
       </div>
-    </div>  
+ 
 
 
-<!-- Update de registro -->
+<!-- Edicion de datos del usuario -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content p-3 mt-2  card-login card-color">
