@@ -31,20 +31,24 @@ var upload = multer({storage: storage,
 
 
 async function register(req, res) {
-      const datos = req.body
-      console.log(datos)
-      const user = await usuarios.create(
-          { 
-              nombre: datos.nombre, 
-              apellido: datos.apellido,
-              password: datos.contrasena,
-              nom_usuario: datos.nom_usuario,
-              correo: datos.correo,
-              img: destino,
-              telefono: datos.num_telefono
-          });
-      res.send("registrado")
-  }
+    const datos = req.body
+    console.log(datos)
+    const user = await usuarios.create(
+        { 
+            nombre: datos.nombre, 
+            apellido: datos.apellido,
+            password: datos.contrasena,
+            nom_usuario: datos.nom_usuario,
+            correo: datos.correo,
+            img: destino,
+            telefono: datos.num_telefono
+        });
+        let logg= true
+        let log= {
+            logg
+        }
+    res.render("login", log)
+}
 
 
 module.exports = {

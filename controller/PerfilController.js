@@ -8,17 +8,9 @@ const { usuarios } = require('../models/Usuario.js');
 
 
 async function getAll(req, res,next) {
-    if(req.session.user){
-        
-        let Usuarios = await usuarios.findOne({ where: {id_usuario: req.session.user} });
-    
-        let data = {
-            Usuarios
-        }
-        res.render('perfil',data)
-    }else{
-        next()
-    }
+    let user = await usuarios.findOne({ where: {id_usuario: req.session.user} });
+
+    res.render('perfil',{ user })
 }
 
 var destino = ""

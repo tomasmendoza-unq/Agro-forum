@@ -13,12 +13,8 @@ async function getAll(req, res) {
     res.render('posteos',data)
 }
 
-function vCrear(req, res){
-    if(req.session.user){
-        res.render('crear')
-    }else{
-        next()
-    }
+function vCrear(req, res, next){
+    res.render('crear')
 }
 
 module.exports = {
