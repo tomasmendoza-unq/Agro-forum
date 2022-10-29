@@ -1,37 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
 *{
   margin: 0px;
   padding: 0px;
 }
-body{ background-color: #e6e6e6; font-family: 'Hind Siliguri', sans-serif;  background-attachment: fixed;  
+body{ background-color: #e6e6e6; background-attachment: fixed; 
+  font-family: 'Inter', sans-serif; 
 } 
 
-button{
-  font-size: 20px !important;
-}
+
 .carousel-item{
 background-color: rgb(34, 48, 37); height: 38rem; } .overlay-image{
-opacity: 40%; 
+  opacity: 40%; 
 } 
 
 .navbar-fluid, .colorbase, 
 footer
 { 
-background-color: #499b4a; color:
-white; font-weight:500; 
+  background-color: #499b4a; color:
+  white; font-weight:500; 
 } 
 .color-container{
-background-color: #499b4a;
+background-color: #4e9b3f;
+}
+.color-secondary{
+  background-color: #44882fa7;
 }
 .colorperfil{
-  background-color: #127647f9;
+  background-color: #167a2cf9;
 }
 
 .card, .card-login{ box-shadow: 0px 5px 10px 7px #0000003b; 
 }
 
-button {
-  font-weight:500;
-}
 /* ESTILO DE IMAGEN */
 .img-size{
   height: 32  0px;
@@ -82,4 +82,23 @@ button {
 
 .vh-100 {
   height: 70vh!important;
+}
+
+
+.text-sec{
+  color: #a3a3a3;
+}
+
+.fw-2{
+  font-weight: 200;
+}
+.fw-3{
+  font-weight: 300;
+}
+
+.collapsing{
+transition: 1s;
+}
+.link{
+  text-decoration: none;
 }
