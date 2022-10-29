@@ -19,7 +19,9 @@ footer
 background-color: #499b4a; color:
 white; font-weight:500; 
 } 
-
+.color-container{
+background-color: #499b4a;
+}
 .colorperfil{
   background-color: #127647f9;
 }
@@ -30,32 +32,48 @@ white; font-weight:500;
 button {
   font-weight:500;
 }
-
-.login-background-color{
-  background: rgb(73,155,74);
-  background: radial-gradient(circle, rgba(73,155,74,1) 0%, rgba(28,77,28,1) 94%);
+/* ESTILO DE IMAGEN */
+.img-size{
+  height: 32  0px;
+  object-fit: cover;
+  object-position: 50% 0%;
 }
 
+/* ESTILLO DE TARJETA */
 .card-color{
   background: rgba(255, 255, 255, 0.549);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   border: 1px solid rgba(127, 123, 123, 0.549);
 }
-
-.form-control:focus {
-  border-color: #28a745;
-  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
-} 
+.card{
+  transition: all 0.2s ease;
+}
+.card:hover{
+  transition: 90ms;
+  transform: scale(1.05);
+  box-shadow: #23953e6a 0px 0px 60px;
+}
 
 .card-login{
   padding-right: 0%;
   padding-left: 0%;
   padding-bottom: 0%;
 }
+
+/* ESTILO DE FORMULARIO / INPUTS */
+.form-control:focus {
+  border-color: #23953e;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+} 
 .input-group-text{
   color: white;
   background-color: #198754;
+}
+
+.login-background-color{
+  background: rgb(73,155,74);
+  background: radial-gradient(circle, rgba(73,155,74,1) 0%, rgba(28,77,28,1) 94%);
 }
 
 .info-container{
