@@ -14,7 +14,10 @@ posteos.init({
         autoIncrement: true
     },
     contenido_planta: DataTypes.STRING,
-    fecha_publicacion: DataTypes.DATE,
+    imagen: DataTypes.STRING,
+    titulo: DataTypes.STRING,
+    categoria: DataTypes.STRING,
+    likes: DataTypes.INTEGER,
     id_planta: DataTypes.INTEGER,
     id_usuario: DataTypes.INTEGER
 },{
