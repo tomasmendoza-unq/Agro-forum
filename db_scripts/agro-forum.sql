@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-10-2022 a las 21:30:27
+-- Tiempo de generación: 29-10-2022 a las 16:57:45
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.0.18
 
@@ -77,20 +77,23 @@ INSERT INTO `plantas` (`id_planta`, `nombre_planta`, `tipo_planta`, `foto_planta
 CREATE TABLE `posteos` (
   `id_post` int(11) NOT NULL,
   `contenido_planta` varchar(150) NOT NULL,
-  `fecha_publicacion` date NOT NULL,
+  `imagen` varchar(250) NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updatedAt` datetime NOT NULL,
   `id_usuario` int(11) NOT NULL,
-  `id_planta` int(11) NOT NULL
+  `id_planta` int(11) NOT NULL,
+  `titulo` varchar(250) NOT NULL,
+  `categoria` varchar(250) NOT NULL,
+  `likes` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `posteos`
 --
 
-INSERT INTO `posteos` (`id_post`, `contenido_planta`, `fecha_publicacion`, `createdAt`, `updatedAt`, `id_usuario`, `id_planta`) VALUES
-(1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ligula ullamcorper, sagittis lectus et, sagittis dui.', '0000-00-00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0),
-(2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ligula ullamcorper, sagittis lectus et, sagittis dui. Maecenas posuere tempus urn', '0000-00-00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0);
+INSERT INTO `posteos` (`id_post`, `contenido_planta`, `imagen`, `createdAt`, `updatedAt`, `id_usuario`, `id_planta`, `titulo`, `categoria`, `likes`) VALUES
+(1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ligula ullamcorper, sagittis lectus et, sagittis dui.', '0000-00-00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, '', '', 0),
+(2, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ligula ullamcorper, sagittis lectus et, sagittis dui. Maecenas posuere tempus urn', '0000-00-00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -116,7 +119,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `password`, `nom_usuario`, `correo`, `img`, `telefono`, `createdAt`, `updatedAt`) VALUES
-(1, 'Nancy', 'Ayala', '111', 'Tomycarlos', 'tm1453766@gmail.com', 'img/usuarios/MÃ¡rcia-Moura-Borboleta-XII.jpg', 1168443651, '2022-10-18 18:43:48', '2022-10-18 18:43:48');
+(1, 'tomas', 'Mendoza', '1', 'tuki', 'mendoza.tomas@gmail.com', 'img/usuarios/b1b09b711e4d44b558dc177e8951a010.gif', 11232342, '2022-10-25 00:18:59', '2022-10-25 00:18:59'),
+(2, 'tomas', 'Mendoza', '123', 'Tomy carlso', 'tm1453766@gmail.com', 'img/usuarios/MÃ¡rcia-Moura-Kiwi-II.jpg', 1122967686, '2022-10-28 22:27:38', '2022-10-28 22:27:38');
 
 --
 -- Índices para tablas volcadas
@@ -172,7 +176,7 @@ ALTER TABLE `posteos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
