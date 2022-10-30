@@ -39,7 +39,7 @@ var upload = multer({storage: storage,
 
 async function updat(req, res) {
     const datos = req.body
-    let Usuarios = await usuarios.findOne({ where: { id_usuario: req.session.user} });
+    let Usuarios = await usuarios.findByPk(req.session.user);
     if(datos.contrasena !== Usuarios.password){
         let logge= true
         let log= {

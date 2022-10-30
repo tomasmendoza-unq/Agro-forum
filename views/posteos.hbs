@@ -71,61 +71,15 @@
 
    <!-- Seccion de posteos (en proceso) -->
     <div class="container text-center mt-5 mb-5">
-      <div class="row row-cols-1 row-cols-md-2 row-cols-sm-2 row-cols-lg-3 g-5">
-        <div class="col">
-          <div class="card card-color">
-            <div class="card-body py-4 px-4">
-              <h3 class="card-title">Cosecha record de tomates en Tierra del fuego.</h3>
-              <p class="card-text">26/08/2022</p>
-              <img
-                src="/img/tomate.jpg"
-                class="card-img-top img-size rounded"
-              />
-              <p class="card-text fw-lighter my-2">TomatoLover21</p>
-              <p class="card-text">Cosecha record de tomates en Tierra del fuego.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card card-color">
-            <div class="card-body py-4 px-4">
-              <h3 class="card-title">Cosecha record de tomates en Tierra del fuego.</h3>
-              <p class="card-text">26/08/2022</p>
-              <img
-                src="/img/tomate.jpg"
-                class="card-img-top img-size rounded"
-              />
-              <p class="card-text fw-lighter my-2">TomatoLover21</p>
-              <p class="card-text">Cosecha record de tomates en Tierra del fuego.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col my-   ">
-          <div class="card card-color">
-            <div class="card-body py-4 px-4">
-              <h3 class="card-title">Cosecha record de tomates en Tierra del fuego.</h3>
-              <p class="card-text">26/08/2022</p>
-              <img
-                src="/img/tomate.jpg"
-                class="card-img-top img-size rounded"
-              />
-              <p class="card-text fw-lighter my-2">TomatoLover21</p>
-              <p class="card-text">Cosecha record de tomates en Tierra del fuego.</p>
-            </div>
-          </div>
-        </div>
-    </div>
-
-   <!-- Seccion de posteos (en proceso) -->
-    <div class="container text-center mt-5 mb-5">
       <div class="row g-2 justify-content-center">
+        {{#each Posteos}}
         <div class="col-lg-4 col-md-4 col-sm-12">
           <div class="card p-3 m-3 card-color" style="width:22rem; height: 32rem;">
             <div class="card-body px-auto " >
-              <h3 class="card-title">Cosecha record de tomates en Tierra del fuego.</h3>
-              <p class="card-text">26/08/2022</p>
+              <h3 class="card-title">{{titulo}}</h3>
+              <p class="card-text">{{createdAt}}</p>
               <img
-                src="/img/tomate.jpg"
+                src="{{imagen}}"
                 class="card-img-top rounded"
                 alt="..."
                 style="height: 12rem;"
@@ -133,63 +87,30 @@
               <p
                 class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
               >TomatoLover21</p>
-              <p class="d-flex justify-con card-text">Cosecha record de tomates en Tierra del fuego.</p>
+              <p class="d-flex justify-con card-text">{{contenido_planta}}</p>
+              <a href="/posteo/{{id_post}}"  class="btn btn-success me-5 detalle justify-content-center">Detalles</a>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card p-3 m-3 card-color" style="width:22rem; height: 32rem;">
-            <div class="card-body px-auto">
-              <h3 class="card-title">Nueva temporada de cultivos de soja en Mendoza, Argentina</h3>
-              <p class="card-text">26/08/2022</p>
-              <img
-                src="/img/card-image-example-2.jpg"
-                class="card-img-top rounded"
-                alt="..."
-              style="height: 12rem;"
-              />
-              <p
-                class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
-              >TomatoLover21</p>
-              <p class="card-text">Me gustan mucho la soja porque es fachera.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card p-3 m-3 card-color" style="width:22rem; height: 32rem;">
-            <div class="card-body px-auto">
-              <h3 class="card-title">Agro cultivos de paltas en mexico, fan de la vida</h3>
-              <p class="card-text">26/08/2022</p>
-              <img
-                src="/img/card-image-example-3.jpg"
-                class="card-img-top rounded"
-                alt="..."
-                style="height: 12rem;"
-              />
-              <p
-                class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
-              >TomatoLover21</p>
-              <p class="card-text">Me gustan mucho los paltas porque son verdes.</p>
-            </div>
-            
-          </div>
-        </div>
+        {{/each}}
+       </div>
       </div>
     </div>
-<div class="container mb-4">
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
-</div>
+
+  <div class="container mb-4">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link"><</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+          <a class="page-link" href="#">></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </body>
 </html>

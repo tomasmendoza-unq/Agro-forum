@@ -16,6 +16,7 @@ const PlantasController = require('./controller/PlantaController')
 const PosteosController = require('./controller/PosteoController')
 
 const MiddlewareController = require ('./controller/MiddlewareController')
+const { authMiddleware } = require('./controller/MiddlewareController')
 
 // configuracion
 app.use(express.static(path.join(__dirname, 'public')));
@@ -49,9 +50,20 @@ app.get('/perfil', MiddlewareController.authMiddleware ,PerfilController.getAll)
 
 app.post('/perfil', PerfilController.upload ,PerfilController.updat);
 
-app.get('/crear', MiddlewareController.authMiddleware,PosteosController.vCrear);
+
+// crear y ver posteos
+
+app.get('/crear', MiddlewareController.authMiddleware, PosteosController.crear);
+
+app.post('/crear', PosteosController.upload,PosteosController.crearPost);
 
 app.get('/posteos', PosteosController.getAll);
+
+app.get('/posteo/:id', MiddlewareController.authMiddleware,PosteosController.getbyId);
+
+app.post('/posteo', PosteosController.upload,PosteosController.editar)
+
+
 
 app.get('/logout', LogoutController.logout);
 
