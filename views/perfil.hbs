@@ -77,7 +77,7 @@
     <div class="d-flex container justify-content-center my-5 ">
       <div class="d-flex row colorperfil rounded text-white">
         <div class="col-12 align-self-center pt-4 pb-4 ">
-          {{#Usuarios}}
+          {{#user}}
          <img class="img-fluid rounded mx-auto d-block shadow" src="{{img}}" alt="" style="width: 200px;"> 
         </div>
         <div class="col-12 align-self-center">
@@ -90,7 +90,7 @@
               <h5 class="lead mb-3">Apellido: <b>{{apellido}}</b></h5>
               <h5 class="lead mb-3">Correo Electronico: <b>{{correo}}</b></h5>
               <h5 class="lead mb-3">Numero de telefono: <b>{{telefono}}</b></h5>
-              {{/Usuarios}}
+              {{/user}}
               </div>
 
         </div>
@@ -120,7 +120,7 @@
       <div class="model-body">
         </div>
         <form action="/perfil" method="POST" enctype="multipart/form-data">
-          {{#Usuarios}}
+          {{#user}}
           <div class="row g-3 mb-3">
           <div class="col-md-6">
             <label for="validationDefault01" class="form-label"> <em>Nombre</em> </label>
@@ -183,7 +183,7 @@
             <button class="btn btn-success" type="submit">Guardar cambios</button>
           </div>
           </div>
-        {{/Usuarios}}
+        {{/user}}
         </form>
       </div>
     </div>

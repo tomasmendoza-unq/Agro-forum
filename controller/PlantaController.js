@@ -8,7 +8,7 @@ async function getAll(req, res) {
     let Plantas = await plantas.findAll();
     let data = {
         Plantas
-}
+    }   
     res.render('plantas',data)
 }
 

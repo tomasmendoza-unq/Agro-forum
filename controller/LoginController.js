@@ -14,25 +14,16 @@ async function logeo(req, res){
 
     if (!user) {
         let loggedin= true
-        let log= {
-            loggedin
-        }
-        res.render("login", log)
+
+        res.render("login", { loggedin })
     }else if (datos.contrasena !== user.password){
         let loggedin= true
-        let log= {
-            loggedin
-        }
-        res.render("login",log)
+
+        res.render("login", { loggedin })
     }else{
         req.session.user= user.id_usuario;
-        let loggedin= true
-        let log= {
-            loggedin,
-            user
-        }
-        console.log(req.session.user);
-        res.render("index", log)
+
+        res.render("perfil", {user})
     }
 }
 

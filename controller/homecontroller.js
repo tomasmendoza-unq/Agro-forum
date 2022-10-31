@@ -1,22 +1,24 @@
-const { Model, DataTypes, update} = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../db/Connection.js');
 
 const {usuarios} = require('../models/Usuario')
 
+
 async function Home(req, res) {
-    if(req.session.user){
-            
-        let user = await usuarios.findOne({ where: {id_usuario: req.session.user} });
+    if(res.locals.userAdmin){
+        let user = await usuarios.findOne({ where: {id_usuario: res.locals.userLogged} });
 
         console.log(req.session.user)
-        let loggedin= true
-        let log= {
-            loggedin,
-            user
-        }
-        res.render('index',log)
-    }else{
+
+        res.render('index', { res , user})
+    } else if (req.session.user) {
+        
+        let user = await usuarios.findOne({ where: {id_usuario: res.locals.userLogged} });
+
         console.log(req.session.user)
+        
+        res.render('index', { res , user})
+    } else {
         res.render('index')
     }
 }
