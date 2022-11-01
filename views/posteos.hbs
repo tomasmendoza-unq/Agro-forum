@@ -69,34 +69,37 @@
         </div>
     </nav>
 
-   <!-- Seccion de posteos (en proceso) -->
-    <div class="container text-center mt-5 mb-5">
-      <div class="row g-2 justify-content-center">
+{{!-- POSTEO RESPONSIVE --}}
+<div class="container text-center my-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-sm-2 row-cols-lg-3 g-5">
         {{#each Posteos}}
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="card p-3 m-3 card-color" style="width:22rem; height: 32rem;">
-            <div class="card-body px-auto " >
+        <div class="col">
+          <div class="card card-size card-color">
+            <div class="card-body py-4 px-4">
               <h3 class="card-title">{{titulo}}</h3>
               <p class="card-text">{{createdAt}}</p>
               <img
                 src="{{imagen}}"
-                class="card-img-top rounded"
-                alt="..."
-                style="height: 12rem;"
+                class="card-img-top img-size img-fluid rounded"
               />
-              <p
-                class="d-flex justify-content-center card-text fw-lighter align-top position-relative mb-0 mt-2"
-              >TomatoLover21</p>
-              <p class="d-flex justify-con card-text">{{contenido_planta}}</p>
-              <a href="/posteo/{{id_post}}"  class="btn btn-success me-5 detalle justify-content-center">Detalles</a>
+              
+              <p class="card-text fw-lighter my-2">Nombre de usuario</p>
+              <p class="card-text module line-clamp ">{{contenido_planta}}</p>
+              <a href="/posteo/{{id_post}}"  class="btn btn-success  detalle justify-content-center">Detalles</a>
             </div>
           </div>
         </div>
         {{/each}}
-       </div>
       </div>
-    </div>
+</div>
 
+
+
+
+
+
+
+{{!-- PAGINATION --}}
   <div class="container mb-4">
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
