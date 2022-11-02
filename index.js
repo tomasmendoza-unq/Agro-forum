@@ -61,7 +61,7 @@ app.get('/posteos', PosteosController.getAll);
 
 app.get('/posteo/:id', MiddlewareController.authMiddleware,PosteosController.getbyId);
 
-app.post('/posteo', PosteosController.upload,PosteosController.editar)
+app.post('/posteo/', PosteosController.upload,PosteosController.editar)
 
 
 

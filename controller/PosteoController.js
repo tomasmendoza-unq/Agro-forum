@@ -6,7 +6,6 @@ const path = require('path')
 
 const { posteos } = require('../models/Posteo.js')
 
-
 var destino = ""
 
 //esto es para almacenar imagenes
@@ -49,9 +48,6 @@ async function getbyId(req, res) {
 
     let posteo = await posteos.findByPk(req.params.id);
 
-    res.locals.id = req.params.id
-    console.log(res.locals.id) 
-
 
     let t = false
     if (req.session.user === posteo.id_usuario ){
@@ -60,14 +56,20 @@ async function getbyId(req, res) {
 
     res.render('posteo', { t, posteo}) 
 }
+
+//render crear
+function crear (req,res){
+    res.render("crear")
+}
+
 // Editar uno 
 async function editar(req, res) {
+
     let data = req.body
 
     //para poder editar un post, busca la sesion del usuario (id)
-    let posteo = await posteos.findByPk({where: {id_post: res.locals.id}});
+    let posteo = await posteos.findByPk(data.id);
 
-    console.log(posteo)
 
     //este if es para comprobar si posteo tiene algo o esta, sino inicio sesion, le manda un error pero si inicio sesion puede editar
     if(posteo){
@@ -79,7 +81,7 @@ async function editar(req, res) {
                 imagen: destino,
             },
             {
-                where: {id_post: res.locals.id},
+                where: {id_post: data.id},
             }
         )
 
@@ -92,10 +94,8 @@ async function editar(req, res) {
 
 }
 
-function crear (req,res){
-    res.render("crear")
-}
 
+//crear post
 async function crearPost(req, res) {
     // Obtiene los datos del body 
     let data = req.body
