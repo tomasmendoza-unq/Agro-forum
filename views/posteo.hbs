@@ -25,7 +25,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="/style.css">
     </head>
-    <body>
+    <body class="colorbaseosc">
         
     <!-- Scripts JS para Bootstrap -->
     <script
@@ -43,7 +43,7 @@
             <div class="container-fluid">
               <a class="navbar-brand " href="/">
                 <img src="/img/logo-agro-forum-agro-black.png" alt="agro-logo" class="img-fluid" style="width:50px;">
-                <a href="" class="link-light text-decoration-none" style="font-size: 25px;">Agro Forum</a> 
+                <a href="/" class="link-light text-decoration-none" style="font-size: 25px;">Agro Forum</a> 
               </a>
             </div>
           </div>
@@ -120,19 +120,19 @@
 
 {{!-- POSTEO RESPONSIVE  --}}
 {{#posteo}}
-    <div class="container color-container my-4 py-4 text-white rounded justify-content-center " id="collapseExample">
+    <div class="container card-color my-4 py-4 text-white justify-content-center " id="collapseExample">
       <div class="row d-flex py-2 mx-2 align-items-center justify-content-center">
         <div class="col-6">
-          <img src="/img/ejemplo_carrusel_3.jpg" alt="" class="d-flex img-fluid rounded justify-content-md-center shadow mb-4">
+          <img src="/{{imagen}}" alt="" class="d-flex img-fluid rounded justify-content-md-center shadow mb-4">
         </div>
-        <div class="col-12 color-secondary rounded shadow text-center py-2">
-          <h1>{{titulo}}</h1>
-          <h3 class="my-3 text-sec fw-2">{{categoria}}</h3>
-          {{contenido_planta}}
+        <div class="col-9 color-secondary shadow text-center py-2">
+          <h1 class="fw-1 display-3">{{titulo}}</h1>
+          <h3 class="my-3 text-sec fw-3">{{categoria}}</h3>
+          <p>{{contenido_planta}}</p>
         </div>
       </div>
      {{/posteo}}
-      <div class="row">
+      <div class="row justify-content-center">
                     {{#if t}}
                     <div class="col-4 mb-3 d-flex justify-content-center">
                     <button type="button" class="btn btn-danger ms-4 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -141,6 +141,49 @@
                     {{/if}}
       </div>
     </div>
+
+<!-- Edicion de datos del usuario -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 mt-2  card-login card-color">
+      <div class="model-body">
+        </div>
+        <form action="/posteo" method="POST" enctype="multipart/form-data">
+          {{#posteo}}
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="validationDefault02" class="form-label"> <em>Titulo del post</em> </label>
+              <input type="text" class="form-control" name="titulo" value="{{titulo}}">
+            </div>
+            <div class="col-md-6">
+              <label for="validationDefault02" class="form-label"> <em>contenido del post</em> </label>
+              <input type="text" class="form-control" name="contenido_planta" value="{{contenido_planta}}">
+            </div>
+            <div class="col-md-6">
+              <label for="validationDefault02" class="form-label"> <em>categoria</em> </label>
+              <input type="text" class="form-control" name="categoria" value="{{categoria}}">
+            </div>
+            <div class="col-md-6">
+              <label for="validationDefaultUsername" class="form-label">Cambiar imagen</label>
+              <input
+                    type="file"
+                    class="form-control"
+                    placeholder="img"
+                    aria-label="Dollar amount (with dot and two decimal places)"
+                    aria-describedby="basic-addon1"
+                    name="imagen"
+                    value="{{imagen}}"
+                />
+            </div>
+          <div class="row g-3">
+            <button class="btn btn-success" type="submit">Guardar cambios</button>
+          </div>
+          </div>
+        {{/posteo}}
+        </form>
+      </div>
+    </div>
+</div>
 
    <!-- Footer -->
     <footer>
@@ -186,76 +229,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Edicion de datos del usuario -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-3 mt-2  card-login card-color">
-      <div class="model-body">
-        </div>
-        <form action="/posteo" method="POST" enctype="multipart/form-data">
-          {{#posteo}}
-          <div class="row g-3 mb-3">
-            <div class="col-md-6">
-              <label for="validationDefault02" class="form-label"> <em>Titulo del post</em> </label>
-              <input type="text" class="form-control" name="titulo" value="{{titulo}}">
-            </div>
-            <div class="col-md-6">
-              <label for="validationDefault02" class="form-label"> <em>contenido del post</em> </label>
-              <input type="text" class="form-control" name="contenido_planta" value="{{contenido_planta}}">
-            </div>
-            <div class="col-md-6">
-              <label for="validationDefault02" class="form-label"> <em>categoria</em> </label>
-              <input type="text" class="form-control" name="categoria" value="{{categoria}}">
-            </div>
-            <div class="col-md-6">
-              <label for="validationDefaultUsername" class="form-label">Cambiar imagen</label>
-              <input
-                    type="file"
-                    class="form-control"
-                    placeholder="img"
-                    aria-label="Dollar amount (with dot and two decimal places)"
-                    aria-describedby="basic-addon1"
-                    name="imagen"
-                    value="{{imagen}}"
-                />
-            </div>
-          <div class="row g-3">
-            <button class="btn btn-success" type="submit">Guardar cambios</button>
-          </div>
-          </div>
-        {{/posteo}}
-        </form>
-      </div>
-    </body>
-</html>
