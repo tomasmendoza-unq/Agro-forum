@@ -69,7 +69,7 @@
               <li class="nav-item">
               <a  class="nav-link link-light btn btn-outline-white "href="/perfil">
               {{#user}}
-              <img class="img-fluid rounded-circle mx-auto d-block shadow" src="{{img}}" alt="" style="width: 45px; height: 45px;">
+              <img class="img-fluid rounded-circle mx-auto d-block shadow" src="/{{img}}" alt="" style="width: 45px; height: 45px;">
               {{/user}}
               </a>
               </li>
@@ -116,9 +116,8 @@
       </div>
     </nav>
 
+{{!-- seccion de posteo --}}
 
-
-{{!-- POSTEO RESPONSIVE  --}}
 {{#posteo}}
     <div class="container card-color my-4 py-4 text-white justify-content-center " id="collapseExample">
       <div class="row d-flex py-2 mx-2 align-items-center justify-content-center">
@@ -141,49 +140,6 @@
                     {{/if}}
       </div>
     </div>
-
-<!-- Edicion de datos del usuario -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-3 mt-2  card-login card-color">
-      <div class="model-body">
-        </div>
-        <form action="/posteo" method="POST" enctype="multipart/form-data">
-          {{#posteo}}
-          <div class="row g-3 mb-3">
-            <div class="col-md-6">
-              <label for="validationDefault02" class="form-label"> <em>Titulo del post</em> </label>
-              <input type="text" class="form-control" name="titulo" value="{{titulo}}">
-            </div>
-            <div class="col-md-6">
-              <label for="validationDefault02" class="form-label"> <em>contenido del post</em> </label>
-              <input type="text" class="form-control" name="contenido_planta" value="{{contenido_planta}}">
-            </div>
-            <div class="col-md-6">
-              <label for="validationDefault02" class="form-label"> <em>categoria</em> </label>
-              <input type="text" class="form-control" name="categoria" value="{{categoria}}">
-            </div>
-            <div class="col-md-6">
-              <label for="validationDefaultUsername" class="form-label">Cambiar imagen</label>
-              <input
-                    type="file"
-                    class="form-control"
-                    placeholder="img"
-                    aria-label="Dollar amount (with dot and two decimal places)"
-                    aria-describedby="basic-addon1"
-                    name="imagen"
-                    value="{{imagen}}"
-                />
-            </div>
-          <div class="row g-3">
-            <button class="btn btn-success" type="submit">Guardar cambios</button>
-          </div>
-          </div>
-        {{/posteo}}
-        </form>
-      </div>
-    </div>
-</div>
 
    <!-- Footer -->
     <footer>
@@ -229,3 +185,76 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Edicion de datos del usuario -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3 mt-2  card-login card-color">
+      <div class="model-body">
+        </div>
+        <form action="/posteo" method="POST" enctype="multipart/form-data">
+          {{#posteo}}
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="validationDefault02" class="form-label"> <em>Titulo del post</em> </label>
+              <input type="text" class="form-control" name="titulo" value="{{titulo}}">
+            </div>
+            <div class="col-md-6">
+              <label for="validationDefault02" class="form-label"> <em>contenido del post</em> </label>
+              <input type="text" class="form-control" name="contenido_planta" value="{{contenido_planta}}">
+            </div>
+            <div class="col-md-6">
+              <label for="validationDefault02" class="form-label"> <em>categoria</em> </label>
+              <input type="text" class="form-control" name="categoria" value="{{categoria}}">
+            </div>
+            <div class="col-md-6">
+              <label for="validationDefaultUsername" class="form-label">Cambiar imagen</label>
+              <input
+                    type="file"
+                    class="form-control"
+                    placeholder="img"
+                    aria-label="Dollar amount (with dot and two decimal places)"
+                    aria-describedby="basic-addon1"
+                    name="imagen"
+                    value="{{imagen}}"
+                />
+            </div>
+          <div class="row g-3">
+            <button class="btn btn-success" type="submit">Guardar cambios</button>
+          </div>
+          </div>
+        {{/posteo}}
+        </form>
+      </div>
+    </body>
+</html>
