@@ -142,3 +142,23 @@ transition: 1s;
 .link-light{
   color: #ededc3 !important;
 }
+
+.shadow{
+  box-shadow: 0px 15px 20px 7px #00000053 !important;
+}
+
+.effect-neon{
+  transition: 0.5s;
+}
+.effect-neon:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #0f9423,
+              0 0 25px #0f9523,
+              0 0 50px #109124,
+              0 0 100px #0e8320;
+}
+
+.page-link{
+  background-color: #07231d;
+  color: #ededc3;
+}

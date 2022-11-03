@@ -54,6 +54,8 @@ async function getbyId(req, res) {
         t = true
     }
 
+ 
+
     res.render('posteo', { t, posteo}) 
 }
 

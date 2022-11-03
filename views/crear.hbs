@@ -84,13 +84,6 @@
       </div>
     </nav>
 
-    <script type="text/javascript">
-      function obtnerdatos()
-      {
-      var titulo = document.getElementById('titulo')
-      }
-    </script>
-
     <!-- Container para crear posteos -->
     <div class=" container  rounded justify-content-center card-color text-dark my-5 py-3" >
         <div class="row m-0 p-0 ">
@@ -114,7 +107,7 @@
         <div class=" d-flex row justify-content-center mb-5 text-dark">
             <div class="col-8">
                 <div class="form-floating">
-                 <textarea class="form-control" id="floatingTextarea2" style="height: 200px" name="descripcion"   required></textarea>
+                 <textarea class="form-control" id="floatingTextarea2" style="height: 200px" name="descripcion" maxlength="300"  required></textarea>
                  <label for="floatingTextarea2">Descripcion general</label>
                 </div>
             </div>
@@ -138,7 +131,7 @@
             <div class="d-flex justify-content-end col-11">
                 {{!-- <input  class="btn btn-success me-2" type="submit" value="Previsualizar" data-bs-toggle="collapse" data-bs-target="#collapseExample"> --}}
                 <input class="btn btn-success me-2" type="submit" value="Publicar">
-                {{!-- <input class="btn btn-danger" type="submit" value="Borrar todo"> --}}
+                <input class="btn btn-danger" type="reset"value="Borrar todo"> 
             </div>
         </div>
       </form>
@@ -147,7 +140,7 @@
 
 
     {{!-- PREVISUALIZACION --}}
- {{!--    <div class="container  card-color  my-5 text-dark rounded justify-content-center " id="collapseExample">
+    <div class="container  card-color  my-5 text-dark rounded justify-content-center " id="collapseExample">
      <div class="row ">
       <div class="d-flex justify-content-end col-12 p-3">
         <button type="button" class="btn-close btn-close-dark" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#collapseExample"></button>
@@ -195,7 +188,7 @@
           </div>
         </div>
       </div>
-    </div> --}}
+    </div>
 
     {{!-- FOOTER --}}
     <footer class="mt-5">
