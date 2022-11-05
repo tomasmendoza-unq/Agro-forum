@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +25,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="/style.css">
     </head>
-    <body class="colorbaseosc">
+<body class="colorbaseosc d-flex flex-column h-100">
         
     <!-- Scripts JS para Bootstrap -->
     <script
@@ -119,77 +119,70 @@
 {{!-- seccion de posteo --}}
 
 {{#posteo}}
-    <div class="container-fluid card-color my-4 py-4 text-white justify-content-center " id="collapseExample">
-      <div class="row d-flex py-2 mx-2 align-items-center justify-content-center">
-        <div class="col-6">
-          <img src="/{{imagen}}" alt="" class="d-flex img-fluid rounded justify-content-md-center shadow mb-4">
+
+    <div class="container p-5  card-color   rounded my-5 text-white justify-content-center " id="collapseExample">
+      <div class="row py-2 mx-2 align-items-center justify-content-center">
+        <div class="col-lg-12 col-md-12 justify-content-center  align-self-center ">
+          <h1 class="fw-1 text-dark text-center display-4 mb-4 fw-1">{{titulo}}</h1>
+          <img src="/{{imagen}}" alt="" class="  mx-auto d-block  img-fluid  shadow mb-4" style="width: 1200px;">
         </div>
-        {{!-- ARREGLAR EL TEXTO DESCRIPTIVO --}}
-        <div class="col color-secondary shadow text-center py-2">
-          <h1 class="fw-1 display-3">{{titulo}}</h1>
-          <h3 class="my-3 text-sec fw-3">{{categoria}}</h3>
-          <p class="text-break"> {{contenido_planta}}</pl>
-          
+      </div>  
+
+      <div class="row py-2 mx-2 align-items-center justify-content-center" > 
+        <div class="col color-secondary shadow rounded text-center text-break py-2 m-0 "  style="width: 1000px;" >
+          <div class="container" >
+          <h3 class="my-3 fs-2 text-sec fw-3"> {{categoria}} </h3>
+          <h4 class="my-3  fs-6 text-sec fw-3">16/11/22</h4>
+          <p class="text-dark fs-5 "> {{contenido_planta}}</pl>
+          </div>
         </div>
       </div>
-     {{/posteo}}
-    </div>
-      <div class="row justify-content-center">
+
+{{/posteo}}
+      <div class="row justify-content-lg-end justify-content-md-center justify-content-sm-center justify-content-center ">
+
                     {{#if t}}
-                    <div class="col-4 mb-3 d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger ms-4 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="col-lg-3 col-xl-2 col-md-3   mt-3 mb-3 d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger  mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Modificar Post
                     </button> </div>
                     {{/if}}
       </div>
+    </div>
 
 
 
 
    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <nav class="row">
-          <ul
-            class="nav justify-content-center border-bottom border-light p-4 mb-4 border-opacity-10 fs-5"
-          >
-            <li class="nav-item"><a
-                href="#"
-                class="nav-link link-light mx-4"
-              > <i class="fa-users"> Sobre Nosotros</i></a></li>
-            <li class="nav-item"><a
-                href="#"
-                class="nav-link link-light mx-4"
-              >
+  <footer class="mt-auto">
+    <div class="container mt-auto py-5 ">
+      <nav class="row">
+        <ul class="nav justify-content-center border-bottom border-light p-4 mb-4 border-opacity-10 fs-5">
+          <li class="nav-item"><a href="#" class="nav-link link-light mx-4"> <i class="fa-users"> Sobre Nosotros</i></a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link link-light mx-4">
               <i class=" fa-instagram"> Instagram</i></a></li>
-            <li class="nav-item">
-              <a
-                href="#"
-                class="nav-link link-light mx-4"
-              > 
+          <li class="nav-item">
+            <a href="#" class="nav-link link-light mx-4">
               <i class=" fa-twitter" aria-hidden="true"> Twitter</i>
-              </a>
-            </li>
-            <li class="nav-item"><a
-                href="#"
-                class="nav-link link-light mx-4"
-              ><i class="fa-comments" aria-hidden="true"> FAQs</i>
-              </a>
-            </li>
-          </ul>
-          <p class="text-center mt-2 mb-5 fs-5">© 2022 Los Botanicos SA, Inc</p>
-        </nav>
-      </div>
-    </footer>
+            </a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link link-light mx-4"><i class="fa-comments" aria-hidden="true">
+                FAQs</i>
+            </a>
+          </li>
+        </ul>
+        <p class="text-center mt-2 mb-5 fs-5">© 2022 Los Botanicos SA, Inc</p>
 
+      </nav>
+    </div>
+  </footer>
 
 
 <!-- Edicion de datos del usuario -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content p-3 mt-2  card-login card-color">
-      <div class="model-body">
-        </div>
+    <div class="modal-content p-3 mt-2 text-dark card-color">
         <form action="/posteo" method="POST" enctype="multipart/form-data">
           {{#posteo}}
           <div class="row g-3 mb-3">
@@ -198,15 +191,15 @@
               <input type="text" class="form-control" name="titulo" value="{{titulo}}">
             </div>
             <div class="col-md-6">
-              <label for="validationDefault02" class="form-label"> <em>contenido del post</em> </label>
-              <input type="text" class="form-control" name="contenido_planta" value="{{contenido_planta}}">
+              <label for="validationDefault02" class="form-label" > <em>Contenido del post</em> </label>
+              <input type="text" class="form-control" name="contenido_planta" value="{{contenido_planta}}" >
             </div>
             <div class="col-md-6">
-              <label for="validationDefault02" class="form-label"> <em>categoria</em> </label>
+              <label for="validationDefault02" class="form-label"> <em>Categoria</em> </label>
               <input type="text" class="form-control" name="categoria" value="{{categoria}}">
             </div>
             <div class="col-md-6">
-              <label for="validationDefaultUsername" class="form-label">Cambiar imagen</label>
+              <label for="validationDefaultUsername" class="form-label"><em>Cambiar imagen</em></label>
               <input
                     type="file"
                     class="form-control"
