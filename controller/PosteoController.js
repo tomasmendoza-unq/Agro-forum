@@ -37,6 +37,8 @@ async function getAll(req, res) {
 
     let Posteos = await posteos.findAll() 
 
+
+
     res.render('posteos', { Posteos})
 }
 
