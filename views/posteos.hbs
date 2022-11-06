@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
 <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,7 +26,7 @@
 
     <title>Agro forum</title>
 </head>
-<body>
+<body class=" d-flex flex-column h-100">
     <!-- Barra de navegacion -->
     <nav class="navbar-fluid pb-2">
       <div class="container-fluid">
@@ -76,16 +76,15 @@
         <div class="col">
           <div class="card card-size card-color">
             <div class="card-body py-4 px-4">
-              <h3 class="card-title">{{titulo}}</h3>
+              <h3 class="card-title fs-3 module line-clamp">{{titulo}}</h3>
               <p class="card-text">{{createdAt}}</p>
               <img
                 src="{{imagen}}"
                 class="card-img-top img-size img-fluid rounded"
               />
-              
               <p class="card-text fw-lighter my-2">Nombre de usuario</p>
               <p class="card-text module line-clamp ">{{contenido_planta}}</p>
-              <a href="/posteo/{{id_post}}"  class="btn btn-success  detalle justify-content-center">Detalles</a>
+              <a href="/posteo/{{id_post}}"  class="btn btn-success  detalle justify-content-center">Ver Posteo »</a>
             </div>
           </div>
         </div>
@@ -93,17 +92,11 @@
       </div>
 </div>
 
-
-
-
-
-
-
 {{!-- PAGINATION --}}
   <div class="container mb-4">
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
+          <li class="page-item ">
             <a class="page-link"><</a>
           </li>
           <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -115,5 +108,31 @@
       </ul>
     </nav>
   </div>
+
+
+    <!-- Footer -->
+  <footer class="mt-auto">
+    <div class="container mt-auto py-5">
+      <nav class="row">
+        <ul class="nav justify-content-center border-bottom border-light p-4 mb-4 border-opacity-10 fs-5">
+          <li class="nav-item"><a href="#" class="nav-link link-light mx-4"> <i class="fa-users"> Sobre Nosotros</i></a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link link-light mx-4">
+              <i class=" fa-instagram"> Instagram</i></a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-light mx-4">
+              <i class=" fa-twitter" aria-hidden="true"> Twitter</i>
+            </a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link link-light mx-4"><i class="fa-comments" aria-hidden="true">
+                FAQs</i>
+            </a>
+          </li>
+        </ul>
+        <p class="text-center mt-2 mb-5 fs-5">© 2022 Los Botanicos SA, Inc</p>
+
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

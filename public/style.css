@@ -1,16 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 *{
   margin: 0px;
   padding: 0px;
 }
 body{ 
-  background-color: #afb0afc9;
-  font-family: 'Hind Siliguri', sans-serif; 
-  color: black;
+  background-color: #ffffff;
+  font-family: 'Lora', serif; 
 } 
 
-
-
+.responsive-text{
+	font-size: calc(25% + 1vw + 1vh);
+}
+.colorbaseosc{
+  background-color: #07231d;
+  color: #ededc3;
+}
+.card-cont{
+  padding-top: 0px;
+  padding-bottom: 50px;
+}
+.card-cont-xl{
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
 
 .carousel-item{
 background-color: rgb(34, 48, 37); height: 38rem; } .overlay-image{
@@ -20,20 +34,17 @@ background-color: rgb(34, 48, 37); height: 38rem; } .overlay-image{
 .navbar-fluid, .colorbase, 
 footer
 { 
-background-color: #428534; color:
-white; font-weight:500; 
+background-color: #0c3f36;
+color: #ededc3;
+font-weight:500; 
 } 
 
 /* Colores y container */
-.color-container{
-background-color: #3f7d32;
-}
+
 .color-secondary{
-  background-color: #2f5f207e;
+  background-color: #1154484e;
 }
-.colorperfil{
-  background-color: #167247f9;
-}
+
 
 
 /* ESTILO DE IMAGEN */
@@ -45,48 +56,49 @@ background-color: #3f7d32;
 }
 
 /* ESTILLO DE TARJETA */
-.card, .card-login{ box-shadow: 0px 5px 10px 7px #0000003b; 
+.card, .card-login{  
+  border-color: #9ab1b1;
+  transition: all 0.5s ease;
+  box-shadow: 0px 5px 10px 7px #00000024; 
 }
 .card{
-  background-color: #0000003b;
   transition: all 0.2s ease;
 }
 .card:hover{
   transition: 90ms;
   transform: scale(1.05);
-  box-shadow: #23953e6a 0px 0px 60px;
+  box-shadow: #0c3f3680 0px 0px 20px;
 }
 
-.card-login{
-  padding-right: 0%;
-  padding-left: 0%;
-  padding-bottom: 0%;
-}
+
 .card-color{
-  background: #e2e9e2c9;
+
+  background:#cad5d5;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(127, 123, 123, 0.39);
+
 }
 
 /* ESTILO DE FORMULARIO / INPUTS */
 .form-control:focus {
-  border-color: #23953e;
-  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+  border-color: #11583e70;
+  box-shadow: 0 0 0 0.2rem #1051324b;
 } 
 .input-group-text{
   color: white;
-  background-color: #198754;
+  background-color: #871919;
 }
 
-.login-background-color{
-  background: rgb(73,155,74);
-  background: radial-gradient(circle, rgba(73,155,74,1) 0%, rgba(28,77,28,1) 94%);
-}
 
-.info-container{
-  background-color: #198754;
+
+/* REVISARRRR COLORES DE LOS BOTONES VERDES Y HOVER */
+/* .btn-success:focus{
+  border-color: #11583e70;
+  box-shadow: 0 0 0 0.2rem #ff05054b;
 }
+ */
+
+
 
 .vh-100 {
   height: 70vh!important;
@@ -94,7 +106,7 @@ background-color: #3f7d32;
 
 
 .text-sec{
-  color: #a3a3a3;
+  color: #dedfdfb3;
 }
 
 .fw-2{
@@ -115,17 +127,49 @@ transition: 1s;
 
 /* LIMITAR CARACTERES QUE SE MUESTRAN EN PANTALLA */
 .module {
-
   width:auto;
   margin: 0 0 1em 0;
   overflow: hidden;
 }
-
-
-
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 
+
+
+.link-light{
+  color: #ededc3 !important;
+}
+
+.shadow{
+  box-shadow: 0px 15px 20px 7px #00000053 !important;
+}
+
+.effect-neon{
+  transition: 0.5s;
+}
+.effect-neon:hover {
+  color: #fff;
+  text-shadow: 0 0 5px #0f9423,
+              0 0 25px #0f9523,
+              0 0 50px #109124,
+              0 0 100px #0e8320;
+}
+
+.page-link{
+  background-color: #07231d;
+  color: #ededc3;
+}
+
+.page-link:hover{
+  background-color:#9ab1b1;
+  color: #07231d;
+}
+
+
+.btn-success{
+
+  background-color:#176f5f;
+}
