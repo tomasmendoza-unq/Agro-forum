@@ -67,11 +67,10 @@
             <ul class="nav justify-content-end fs-5">
               {{# if res.locals.userFound}}
               <li class="nav-item">
-              <a  class="nav-link link-light btn btn-outline-white "href="/perfil">
-              {{#user}}
-              <img class="img-fluid rounded-circle mx-auto d-block shadow" src="/{{img}}" alt="" style="width: 45px; height: 45px;">
-              {{/user}}
-              </a>
+              <a
+                class="nav-link link-light btn btn-outline-white me-2"
+                href="/logout"
+              >Desloguearse</a>
               </li>
               <li class="nav-item pt-1">
                 <a
