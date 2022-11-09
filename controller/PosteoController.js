@@ -37,6 +37,8 @@ async function getAll(req, res) {
 
     let Posteos = await posteos.findAll() 
 
+
+
     res.render('posteos', { Posteos})
 }
 
@@ -56,7 +58,7 @@ async function getbyId(req, res) {
 
  
 
-    res.render('posteo', { t, posteo}) 
+    res.render('posteo', { t, posteo, res}) 
 }
 
 //render crear

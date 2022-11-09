@@ -9,6 +9,10 @@ body{
   background-color: #ffffff;
   font-family: 'Lora', serif; 
 } 
+
+.responsive-text{
+	font-size: calc(25% + 1vw + 1vh);
+}
 .colorbaseosc{
   background-color: #07231d;
   color: #ededc3;
@@ -38,7 +42,7 @@ font-weight:500;
 /* Colores y container */
 
 .color-secondary{
-  background-color: #0c3f3693;
+  background-color: #1154484e;
 }
 
 
@@ -66,11 +70,7 @@ font-weight:500;
   box-shadow: #0c3f3680 0px 0px 20px;
 }
 
-.card-login{
-  padding-right: 0%;
-  padding-left: 0%;
-  padding-bottom: 0%;
-}
+
 .card-color{
 
   background:#cad5d5;
@@ -106,7 +106,7 @@ font-weight:500;
 
 
 .text-sec{
-  color: #a3a3a3;
+  color: #dedfdfb3;
 }
 
 .fw-2{
@@ -161,4 +161,15 @@ transition: 1s;
 .page-link{
   background-color: #07231d;
   color: #ededc3;
+}
+
+.page-link:hover{
+  background-color:#9ab1b1;
+  color: #07231d;
+}
+
+
+.btn-success{
+
+  background-color:#176f5f;
 }
