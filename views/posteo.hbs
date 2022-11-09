@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -119,7 +119,7 @@
 
 {{#posteo}}
 
-    <div class="container p-5  card-color   rounded my-5 text-white justify-content-center " id="collapseExample">
+    <div class="container p-5   card-color   rounded mt-5 text-white justify-content-center">
       <div class="row py-2 mx-2 align-items-center justify-content-center">
         <div class="col-lg-12 col-md-12 justify-content-center  align-self-center ">
           <h1 class="fw-1 text-dark text-center display-4 mb-4 fw-1">{{titulo}}</h1>
@@ -138,18 +138,72 @@
       </div>
 
 {{/posteo}}
-      <div class="row justify-content-lg-end justify-content-md-center justify-content-sm-center justify-content-center ">
-
+      <div class="row  m-0 justify-content-lg-end justify-content-md-center justify-content-sm-center justify-content-center ">
+        <div class="col-lg-8 align-self-center text-left text-dark mt-4 mb-3">
+          <h3>Visualizaciones: 2567 </h3>
+        </div>
+                    <div class="col-lg-4 mt-4 mb-3 d-flex justify-content-end">
                     {{#if t}}
-                    <div class="col-lg-3 col-xl-2 col-md-3   mt-3 mb-3 d-flex justify-content-center">
-                    <button type="button" class="btn btn-danger  mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-danger me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Modificar Post
-                    </button> </div>
+                    </button> 
                     {{/if}}
+                    <button type="button" class="btn btn-success detalle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Ver comentarios
+                    </button> 
+                    </div>
       </div>
     </div>
 
+  {{!-- Seccion de comentarios --}}
+<div class="collapse" id="collapseExample">
+ <div class="container rounded mt-4 mb-5 card-color text-dark">
 
+  <div class="d-flex container-fluid justify-content-end pt-3">
+    <button type="button" class="btn-close btn-close-dark" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" ></button>
+  </div>
+  
+  <div class="container pt-3 ">
+    <div class="row align-items-center mb-3 rounded color-secondary shadow-sm">
+      <div class="col-2  py-2 pe-0  align-self-center">
+        <img src="../img/logo.jpg" alt="" class="img-fluid  mx-auto d-block rounded-circle" style="width: 70px;" >
+        <p class="text-center m-0">Juancho</p>
+      </div>
+      <div class="col-10 ">
+        <h6>Fecha</h6>
+        <h5>Comentario</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row align-items-center mb-3 rounded color-secondary shadow-sm">
+      <div class="col-2 py-2 pe-0 px-3 align-self-center">
+        <img src="../img/logo.jpg" alt="" class="img-fluid  mx-auto d-block rounded-circle" style="width: 70px;" >
+        <p class="text-center m-0">Juancho</p>
+      </div>
+      <div class="col-10 p-0">
+        <h6>Fecha</h6>
+        <h5>Comentario</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pb-3">
+    <div class="row align-items-center mb-3 rounded color-secondary shadow-sm">
+      <div class="col-2 py-2 pe-0 px-3 align-self-center">
+        <img src="../img/logo.jpg" alt="" class="img-fluid  mx-auto d-block rounded-circle" style="width: 70px;" >
+        <p class="text-center m-0">Juancho</p>
+      </div>
+      <div class="col-10 p-0">
+        <h6>Fecha</h6>
+        <h5>Comentario</h5>
+      </div>
+    </div>
+  </div>
+
+ </div>
+</div>
 
 
    <!-- Footer -->
