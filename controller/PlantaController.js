@@ -15,33 +15,31 @@ async function create(req, res) {
     const posteoPlanta = await posteos.create(
         {
             nombre_planta: data.nombre_planta,
-            tipo_planta: data.tipo_planta,
-            foto_planta: data.foto_planta
+            tipo_planta: data.tipo_planta
         });
 
-    res.render('posteoPlanta', { posteoPlanta })
+    res.json('posteoPlanta', { posteoPlanta })
 }
 
 async function edit(req, res) {
     let data = req.body
 
-    let editPlanta = await edits.findByPk(data.id);
+    let editPlanta = await plantas.findByPk(data.id);
 
     if (editPlanta) {
         let edit = await editPlanta.update(
             {
                 nombre_planta: data.nombre_planta,
-                tipo_planta: data.tipo_planta,
-                foto_planta: data.foto_planta
+                tipo_planta: data.tipo_planta
             },
             {
                 where: { id_post: data.id },
             }
         )
 
-        let editPlants = await edits.findAll()
+        let editPlants = await plantas.findAll()
 
-        res.render(`editar`, { editPlants })
+        res.json(`editar`, { editPlants })
     } else {
         res.send('error')
     }
