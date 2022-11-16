@@ -53,7 +53,7 @@ app.post('/perfil', PerfilController.upload ,PerfilController.updat);
 
 // crear y ver posteos
 
-app.get('/crear', /*MiddlewareController.authMiddleware*/ PosteosController.crear);
+app.get('/crear', MiddlewareController.authMiddleware, PosteosController.crear);
 
 app.post('/crear', PosteosController.upload,PosteosController.crearPost);
 
@@ -63,6 +63,9 @@ app.get('/posteo/:id', MiddlewareController.authMiddleware,PosteosController.get
 
 app.post('/posteo/', PosteosController.upload,PosteosController.editar)
 
+// Comentarios
+
+app.post('/comentar', PosteosController.comentar)
 
 
 app.get('/logout', LogoutController.logout);

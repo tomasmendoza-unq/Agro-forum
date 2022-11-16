@@ -32,7 +32,7 @@ var upload = multer({storage: storage,
 
 async function register(req, res) {
     const datos = req.body
-    console.log(datos)
+    
     const user = await usuarios.create(
         { 
             nombre: datos.nombre, 

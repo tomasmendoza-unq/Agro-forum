@@ -5,6 +5,8 @@ const multer = require('multer')
 const path = require('path')
 
 const { posteos } = require('../models/Posteo.js')
+const { comentarios } = require ('../models/Comentario.js');
+const { usuarios } = require ('../models/Usuario')
 
 var destino = ""
 
@@ -45,20 +47,43 @@ async function getAll(req, res) {
 // Obtener uno
 
 async function getbyId(req, res) {
- // Obtiene el id del href de posteos
-    console.log(req.body)
-
     let posteo = await posteos.findByPk(req.params.id);
+    let user 
+    if (posteo.visitas) {
+        let visitas = posteo.visitas + 1 
+        let post = await posteo.update(
+            {
+                visitas: visitas
+            },
+            {
+                where: {id_post: req.params.id},
+            }
+        )
+        console.log(visitas)
+    }
 
+    let comentario = await comentarios.findAll({
+        where: {
+            id_post: req.params.id
+        }
+    }) 
+    for (let index = 0; index < comentario.length; index++) {
+        const element = comentario[index].dataValues.id_usuario;
+        user = await usuarios.findAll({
+            where: {
+                id_usuario: element
+            }
+        })
+    }
 
     let t = false
     if (req.session.user === posteo.id_usuario ){
         t = true
     }
 
- 
-
-    res.render('posteo', { t, posteo, res}) 
+    // console.log(posteo.id_usuario)
+    
+    res.render('posteo', { t, posteo, res, comentario, user}) 
 }
 
 //render crear
@@ -117,11 +142,23 @@ async function crearPost(req, res) {
     res.render('posteo', {posteo})
 }
 
+async function comentar (req,res,next) {
+    let data = req.body
+    const Comentarios = await comentarios.create ({
+        comentario_usuario: data.comentario,
+        id_usuario: req.session.user,
+        id_post: data.id
+    });
+    res.redirect('posteos')
+}
+
+
 module.exports = {
     getAll,
     getbyId,
     editar,
     upload,
     crearPost,
-    crear
+    crear,
+    comentar
 };
