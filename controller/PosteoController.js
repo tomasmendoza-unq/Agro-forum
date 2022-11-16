@@ -49,7 +49,7 @@ async function getAll(req, res) {
 async function getbyId(req, res) {
     let posteo = await posteos.findByPk(req.params.id);
     let user 
-    if (posteo.visitas) {
+    
         let visitas = posteo.visitas + 1 
         let post = await posteo.update(
             {
@@ -59,8 +59,6 @@ async function getbyId(req, res) {
                 where: {id_post: req.params.id},
             }
         )
-        console.log(visitas)
-    }
 
     let comentario = await comentarios.findAll({
         where: {
