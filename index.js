@@ -4,6 +4,9 @@ const app = express()
 const path = require('path')
 const session = require('express-session')
 const port = 8000
+const exphbs = require ('express-handlebars')
+const _handlebars = require('handlebars')
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 
 const homeController = require('./controller/homeController')
 
@@ -20,7 +23,16 @@ const { authMiddleware } = require('./controller/MiddlewareController')
 
 // configuracion
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.engine('hbs', exphbs.engine({
+  defaultLayout: 'main',
+  layoutDir: path.join(__dirname, 'views/layouts'),
+  partialsDir: path.join(__dirname, 'views/partials'),
+  handlebars: allowInsecurePrototypeAccess(_handlebars),
+}))
+
 app.set('view engine', 'hbs');
+
 app.use(session({
   secret: 'botanicos',
   resave: false,
@@ -43,8 +55,6 @@ app.get('/login', loginController.login)
 app.post('/login', registerController.upload ,registerController.register);
 
 app.post('/', loginController.logeo);
-
-app.get('/plantas', PlantasController.getAll);
 
 app.get('/perfil', MiddlewareController.authMiddleware ,PerfilController.getAll);
 
