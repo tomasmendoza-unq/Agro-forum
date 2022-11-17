@@ -12,6 +12,7 @@
   "author": "leopoldo109",
   "license": "ISC",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",

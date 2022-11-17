@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -137,77 +137,72 @@
         </div>
       </div>
 
-{{/posteo}}
       <div class="row  m-0 justify-content-lg-end justify-content-md-center justify-content-sm-center justify-content-center ">
         <div class="col-lg-8 align-self-center text-left text-dark mt-4 mb-3">
-          <h3>Visualizaciones: 2567 </h3>
+          <h3>Visualizaciones: {{visitas}} </h3>
         </div>
-                    <div class="col-lg-4 mt-4 mb-3 d-flex justify-content-end">
-                    {{#if t}}
-                    <button type="button" class="btn btn-danger me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Modificar Post
-                    </button> 
-                    {{/if}}
-                    <button type="button" class="btn btn-success detalle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Ver comentarios
-                    </button> 
-                    </div>
+{{/posteo}}
+
+          <div class="col-lg-4 mt-4 mb-3 d-flex justify-content-end">
+            {{#if t}}
+            <button type="button" class="btn btn-danger me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Modificar Post
+            </button> 
+            {{/if}}
+            <button type="button" class="btn btn-success detalle" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Ver comentarios
+            </button> 
+        </div>
       </div>
     </div>
 
   {{!-- Seccion de comentarios --}}
 <div class="collapse" id="collapseExample">
- <div class="container rounded mt-4 mb-5 card-color text-dark">
+  <div class="container rounded mt-4 mb-5 card-color text-dark">
 
   <div class="d-flex container-fluid justify-content-end pt-3">
     <button type="button" class="btn-close btn-close-dark" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" ></button>
   </div>
   
-  <div class="container pt-3 ">
-    <div class="row align-items-center mb-3 rounded color-secondary shadow-sm">
-      <div class="col-2  py-2 pe-0  align-self-center">
-        <img src="../img/logo.jpg" alt="" class="img-fluid  mx-auto d-block rounded-circle" style="width: 70px;" >
-        <p class="text-center m-0">Juancho</p>
+  <div class="container pt-3 pb-5 ">
+    <form action="/comentar" method="post">
+      <div class="row">
+        <div class="col-12 py-2 pb-5">
+          <div class="form-floating">
+            <textarea class="form-control" name="comentario" style="height: 200px" required></textarea>
+            <label for="floatingTextarea2">Comentar..</label>
+          </div>
+        </div>
+        <div class="col-12 pb-5">
+          {{#posteo}}
+          <button type="submit" class="btn btn-success detalle"aria-expanded="false" name="id" value="{{id_post}}">
+            Subir comentario
+          </button> 
+          {{/posteo}}
+        </div>
       </div>
-      <div class="col-10 ">
-        <h6>Fecha</h6>
-        <h5>Comentario</h5>
+    </form>
+    {{#comentario}}
+    <div class="row align-items-center mb-5 rounded color-secondary shadow-sm">
+      <div class="col-2  py-2 mb-5 align-self-center">
+        {{#user}}
+          <img src="/{{img}}" alt="" class="img-fluid  mx-auto d-block rounded-circle" style="width: 70px;" >
+          <p class="text-center m-0">{{nom_usuario}}</p>
+        {{/user}}
       </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row align-items-center mb-3 rounded color-secondary shadow-sm">
-      <div class="col-2 py-2 pe-0 px-3 align-self-center">
-        <img src="../img/logo.jpg" alt="" class="img-fluid  mx-auto d-block rounded-circle" style="width: 70px;" >
-        <p class="text-center m-0">Juancho</p>
-      </div>
-      <div class="col-10 p-0">
-        <h6>Fecha</h6>
-        <h5>Comentario</h5>
-      </div>
-    </div>
-  </div>
-
-  <div class="container pb-3">
-    <div class="row align-items-center mb-3 rounded color-secondary shadow-sm">
-      <div class="col-2 py-2 pe-0 px-3 align-self-center">
-        <img src="../img/logo.jpg" alt="" class="img-fluid  mx-auto d-block rounded-circle" style="width: 70px;" >
-        <p class="text-center m-0">Juancho</p>
-      </div>
-      <div class="col-10 p-0">
-        <h6>Fecha</h6>
-        <h5>Comentario</h5>
+      <div class="col-10">
+        <h6>{{createdAt}}</h6>
+        <h5>{{comentario_usuario}}</h5>
       </div>
     </div>
+    {{/comentario}}
   </div>
-
  </div>
 </div>
 
 
    <!-- Footer -->
-  <footer class="mt-auto">
+  <footer class="mt-5">
     <div class="container mt-auto py-5 ">
       <nav class="row">
         <ul class="nav justify-content-center border-bottom border-light p-4 mb-4 border-opacity-10 fs-5">

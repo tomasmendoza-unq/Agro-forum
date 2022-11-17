@@ -1,0 +1,79 @@
+<!-- Barra de navegacion -->
+<nav class="navbar-fluid pb-2">
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-lg-3 text-left mt-3">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="/">
+            <img src="/img/logo-agro-forum-agro-black.png" alt="agro-logo" class="img-fluid" style="width:50px;">
+            <a href="/" class="link-light text-decoration-none" style="font-size: 25px;">Agro Forum</a> 
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-3 text-center mt-3">
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control border form-control-success text-bg-white me-2"
+              type="search"
+              placeholder="Buscador"
+              aria-label="Search"
+            />
+            <button
+              class="link-light btn btn-outline-white"
+              type="submit"
+            >Buscar</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center mt-3" >
+        <ul class="nav justify-content-end fs-5">
+          {{# if res.locals.userFound}}
+          <li class="nav-item">
+          <a
+            class="nav-link link-light btn btn-outline-white me-2"
+            href="/logout"
+          >Desloguearse</a>
+          </li>
+          <li class="nav-item pt-1">
+            <a
+              class="nav-link link-light btn btn-outline-white "
+              href="/crear"
+            >Crear Post</a>
+          </li>
+            {{else }}
+            <li class="nav-item pt-1">
+            <a
+              class="nav-link link-light btn btn-outline-white "
+              href="/login"
+            >Login</a>
+            </li>
+            
+            <li class="nav-item pt-1">
+              <a
+                class="nav-link link-light btn btn-outline-white "
+                href="/plantas"
+              >Plants</a>
+            </li>
+            {{/if}}
+            <li class="nav-item pt-1">
+              <a
+                class="nav-link link-light btn btn-outline-white "
+                href="/posteos"
+              >Post's</a>
+            </li>
+            {{# if res.locals.userAdmin}}
+            <li class="nav-item pt-1">
+              <a
+                class="nav-link link-light btn btn-outline-white "
+                href="/planta"
+              >Crear categoria de planta</a>
+            </li>
+            {{/if}}
+          </li>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

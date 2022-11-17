@@ -18,6 +18,7 @@ posteos.init({
     titulo: DataTypes.STRING,
     categoria: DataTypes.STRING,
     likes: DataTypes.INTEGER,
+    visitas: DataTypes.INTEGER, 
     id_planta: DataTypes.INTEGER,
     id_usuario: DataTypes.INTEGER
 },{
