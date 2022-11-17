@@ -1,5 +1,5 @@
 const { Model, DataTypes} = require('sequelize');
-const sequelize = require('../db/Connection');
+const sequelize = require('../db/Connection.js');
 
 
 class plantas extends Model {}
@@ -11,7 +11,7 @@ plantas.init({
         autoIncrement: true
     },
     nombre_planta: DataTypes.STRING,
-    tipo_planta: DataTypes.INTEGER,
+    tipo_planta: DataTypes.STRING,
     foto_planta: DataTypes.STRING,
 },{
     sequelize, 

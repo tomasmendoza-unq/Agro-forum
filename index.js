@@ -44,7 +44,17 @@ app.post('/login', registerController.upload ,registerController.register);
 
 app.post('/', loginController.logeo);
 
-app.get('/plantas', PlantasController.getAll);
+/* API */
+app.post('/api/plantas', PlantasController.create);
+
+app.put('/api/plantas/:id', PlantasController.edit);
+
+app.get('/api/plantas', PlantasController.viewAll);
+
+app.delete('/api/plantas/:id', PlantasController.deleteOne);
+
+app.get('/api/plantas/:id', PlantasController.viewOne)
+
 
 app.get('/perfil', MiddlewareController.authMiddleware ,PerfilController.getAll);
 
@@ -68,7 +78,6 @@ app.post('/posteo/', PosteosController.upload,PosteosController.editar)
 app.get('/logout', LogoutController.logout);
 
 app.get('*', homeController.notfound)
-
 
 app.listen(port)
 console.log("Esta ejecutando el server: " + "http://localhost:"+port)

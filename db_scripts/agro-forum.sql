@@ -2,7 +2,7 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
+-- Servidor: 127.0.0.1`agro-forum`
 -- Tiempo de generación: 29-10-2022 a las 16:57:45
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.0.18
@@ -54,8 +54,8 @@ INSERT INTO `comentarios` (`id_comentarios`, `comentario_usuario`, `createdAt`, 
 CREATE TABLE `plantas` (
   `id_planta` int(11) NOT NULL,
   `nombre_planta` varchar(50) NOT NULL,
-  `tipo_planta` int(50) NOT NULL,
-  `foto_planta` varchar(50) NOT NULL,
+  `tipo_planta` varchar(50) NOT NULL,
+  `foto_planta` TEXT NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `updatedAt` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
