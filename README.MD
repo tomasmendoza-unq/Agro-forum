@@ -5,7 +5,7 @@ Repositorio para la realizacion de un foro de plantas
 
 ## ¿Cual es la finalidad de esta aplicacion?🕵️‍♀️
 
-El objetivo de nuestra aplicación es el de crear un espacio donde aficionados o expertos en cultivos puedan resolver sus dudas o estén dispuestos a aprender y expresarse por medio de nuestra Wiki/Foro.
+El objetivo de nuestra aplicación es crear un espacio donde aficionados o expertos en cultivos puedan resolver sus dudas o estén dispuestos a aprender y expresarse por medio de nuestra Wiki/Foro.
 
 ## Desarrolladores de esta app🌆
 
